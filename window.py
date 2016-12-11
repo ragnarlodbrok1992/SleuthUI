@@ -26,6 +26,28 @@ class Window:
         radioButtonMEMORYMap = QtGui.QRadioButton()
         radioButtonLOGGING = QtGui.QRadioButton()
 
+        radioButtonLogLandclassSummary = QtGui.QRadioButton()
+        radioButtonLogSlopeWeight = QtGui.QRadioButton()
+        radioButtonLogReads = QtGui.QRadioButton()
+        radioButtonLogWrites = QtGui.QRadioButton()
+        radioButtonLogColortables = QtGui.QRadioButton()
+        radioButtonLogTransitionMatrix = QtGui.QRadioButton()
+        radioButtonLogUrbanizationAttempts = QtGui.QRadioButton()
+        radioButtonLogInitialCoefficients = QtGui.QRadioButton()
+        radioButtonLogBaseStatistics = QtGui.QRadioButton()
+        radioButtonLogDebug = QtGui.QRadioButton()
+        radioButtonLogProcessingStatus = QtGui.QRadioButton()
+        radioButtonLogTimings = QtGui.QRadioButton()
+        radioButtonWorkingGrids = QtGui.QRadioButton()
+        radioButtonRandomSeed = QtGui.QRadioButton()
+        radioButtonMontecarloIterations = QtGui.QRadioButton()
+        radioButtonAuxDiffusionMult = QtGui.QRadioButton()
+        radioButtonAuxDiffusionCoeff = QtGui.QRadioButton()
+        radioButtonAuxBreedCoeff = QtGui.QRadioButton()
+        radioButtonWriteRatioFile = QtGui.QRadioButton()
+        radioButtonWriteSlopeFile = QtGui.QRadioButton()
+        radioButtonWriteXYPointsFile = QtGui.QRadioButton()
+
         # Setting buttons
         buttonUrbanDataImage = QtGui.QPushButton()
         buttonUrbanDataImage.setText("Wybierz z dysku")
@@ -114,6 +136,32 @@ class Window:
         labelBoom = QtGui.QLabel()
         labelBust = QtGui.QLabel()
 
+        # Setting log file labels
+        labelLogLandclassSummary = QtGui.QLabel()
+        labelLogSlopeWeight = QtGui.QLabel()
+        labelLogReads = QtGui.QLabel()
+        labelLogWrites = QtGui.QLabel()
+        labelLogColortables = QtGui.QLabel()
+        labelLogTransitionMatrix = QtGui.QLabel()
+        labelLogUrbanizationAttempts = QtGui.QLabel()
+        labelLogInitialCoefficients = QtGui.QLabel()
+        labelLogBaseStatistics = QtGui.QLabel()
+        labelLogDebug = QtGui.QLabel()
+
+        labelLogProcessingStatus = QtGui.QLabel()
+        labelLogTimings = QtGui.QLabel()
+
+        labelWorkingGrids = QtGui.QLabel()
+        labelRandomSeed = QtGui.QLabel()
+        labelMontecarloIterations = QtGui.QLabel()
+
+        labelAuxDiffusionMult = QtGui.QLabel()
+        labelAuxDiffusionCoeff = QtGui.QLabel()
+        labelAuxBreedCoeff = QtGui.QLabel()
+        labelWriteRatioFile = QtGui.QLabel()
+        labelWriteSlopeFile = QtGui.QLabel()
+        labelWriteXYPointsFile = QtGui.QLabel()
+
         # Setting label texts
         labelSleuthModel.setText("SLEUTH Model: ")
         labelSimulation.setText("SIMULATION: ")
@@ -143,6 +191,32 @@ class Window:
         labelSTDDEVFile.setText("STD DEV file")
         labelMEMORYmap.setText("MEMORY map")
         labelLOGGING.setText("LOGGING")
+
+        # Setting log file preference label texts
+        labelLogLandclassSummary.setText("LOG_LANDCLASS_SUMMARY")
+        labelLogSlopeWeight.setText("LOG_SLOPE_WEIGHT")
+        labelLogReads.setText("LOG_READS")
+        labelLogWrites.setText("LOG_WRITES")
+        labelLogColortables.setText("LOG_COLORTABLES")
+        labelLogTransitionMatrix.setText("LOG_TRANSITION_MATRIX")
+        labelLogUrbanizationAttempts.setText("LOG_URBANIZATION_ATTEMPTS")
+        labelLogInitialCoefficients.setText("LOG_INITIAL_COEFFICIENTS")
+        labelLogBaseStatistics.setText("LOG_BASE_STATISTICS")
+        labelLogDebug.setText("LOG_DEBUG")
+
+        labelLogProcessingStatus.setText("LOG_PROCESSING_STATUS")
+        labelLogTimings.setText("LOG_TIMINGS")
+
+        labelWorkingGrids.setText("WORKING GRIDS")
+        labelRandomSeed.setText("RANDOM SEED")
+        labelMontecarloIterations.setText("MONTECARLO ITERATIONS")
+
+        labelAuxDiffusionMult.setText("AUX_DIFFUSION_MULT")
+        labelAuxDiffusionCoeff.setText("AUX_DIFFUSION_COEFF")
+        labelAuxBreedCoeff.setText("AUX_BREED_COEFF")
+        labelWriteRatioFile.setText("WRITE_RATIO_FILE")
+        labelWriteSlopeFile.setText("WRITE_SLOPE_FILE")
+        labelWriteXYPointsFile.setText("WRITE_XYPOINTS_FILE")
 
         # Setting label alignments
         labelInputOutputDirectoryMain.setAlignment(QtCore.Qt.AlignCenter)
@@ -396,6 +470,91 @@ class Window:
         boxHBoom = QtGui.QHBoxLayout()
         boxHBust = QtGui.QHBoxLayout()
 
+        # Setting log file preferences layouts
+        boxHLogLandclassSummary = QtGui.QHBoxLayout()
+        boxHLogSlopeWeight = QtGui.QHBoxLayout()
+        boxHLogReads = QtGui.QHBoxLayout()
+        boxHLogWrites = QtGui.QHBoxLayout()
+        boxHLogColortables = QtGui.QHBoxLayout()
+        boxHLogTransitionMatrix = QtGui.QHBoxLayout()
+        boxHLogUrbanizationAttempts = QtGui.QHBoxLayout()
+        boxHLogInitialCoefficients = QtGui.QHBoxLayout()
+        boxHLogBaseStatistics = QtGui.QHBoxLayout()
+        boxHLogDebug = QtGui.QHBoxLayout()
+        boxHLogProcessingStatus = QtGui.QHBoxLayout()
+        boxHLogTimings = QtGui.QHBoxLayout()
+        boxHWorkingGrids = QtGui.QHBoxLayout()
+        boxHRandomSeed = QtGui.QHBoxLayout()
+        boxHMontecarloIterations = QtGui.QHBoxLayout()
+        boxHAuxDiffustionMult = QtGui.QHBoxLayout()
+        boxHAuxDiffustionCoeff = QtGui.QHBoxLayout()
+        boxHAuxBreedCoeff = QtGui.QHBoxLayout()
+        boxHWriteRatioFile = QtGui.QHBoxLayout()
+        boxHWriteSlopeFile = QtGui.QHBoxLayout()
+        boxHWriteXYPointsFile = QtGui.QHBoxLayout()
+
+        # Adding widgets to log file preferences minimal layouts
+
+        boxHLogLandclassSummary.addWidget(labelLogLandclassSummary)
+        boxHLogLandclassSummary.addWidget(radioButtonLogLandclassSummary)
+
+        boxHLogSlopeWeight.addWidget(labelLogSlopeWeight)
+        boxHLogSlopeWeight.addWidget(radioButtonLogSlopeWeight)
+
+        boxHLogReads.addWidget(labelLogReads)
+        boxHLogReads.addWidget(radioButtonLogReads)
+
+        boxHLogWrites.addWidget(labelLogWrites)
+        boxHLogWrites.addWidget(radioButtonLogWrites)
+
+        boxHLogColortables.addWidget(labelLogColortables)
+        boxHLogColortables.addWidget(radioButtonLogColortables)
+
+        boxHLogTransitionMatrix.addWidget(labelLogTransitionMatrix)
+        boxHLogTransitionMatrix.addWidget(radioButtonLogTransitionMatrix)
+
+        boxHLogUrbanizationAttempts.addWidget(labelLogUrbanizationAttempts)
+        boxHLogUrbanizationAttempts.addWidget(radioButtonLogUrbanizationAttempts)
+
+        boxHLogInitialCoefficients.addWidget(labelLogInitialCoefficients)
+        boxHLogInitialCoefficients.addWidget(radioButtonLogInitialCoefficients)
+
+        boxHLogBaseStatistics.addWidget(labelLogBaseStatistics)
+        boxHLogBaseStatistics.addWidget(radioButtonLogBaseStatistics)
+
+        boxHLogDebug.addWidget(labelLogDebug)
+        boxHLogDebug.addWidget(radioButtonLogDebug)
+
+        boxHLogProcessingStatus.addWidget(labelLogProcessingStatus)
+        boxHLogProcessingStatus.addWidget(radioButtonLogProcessingStatus)
+
+        boxHWorkingGrids.addWidget(labelWorkingGrids)
+        boxHWorkingGrids.addWidget(radioButtonWorkingGrids)
+
+        boxHRandomSeed.addWidget(labelRandomSeed)
+        boxHRandomSeed.addWidget(radioButtonRandomSeed)
+
+        boxHMontecarloIterations.addWidget(labelMontecarloIterations)
+        boxHMontecarloIterations.addWidget(radioButtonMontecarloIterations)
+
+        boxHAuxDiffustionMult.addWidget(labelAuxDiffusionMult)
+        boxHAuxDiffustionMult.addWidget(radioButtonAuxDiffusionMult)
+
+        boxHAuxDiffustionCoeff.addWidget(labelAuxDiffusionCoeff)
+        boxHAuxDiffustionCoeff.addWidget(radioButtonAuxDiffusionCoeff)
+
+        boxHAuxBreedCoeff.addWidget(labelAuxBreedCoeff)
+        boxHAuxBreedCoeff.addWidget(radioButtonAuxBreedCoeff)
+
+        boxHWriteRatioFile.addWidget(labelWriteRatioFile)
+        boxHWriteRatioFile.addWidget(radioButtonWriteRatioFile)
+
+        boxHWriteSlopeFile.addWidget(labelWriteSlopeFile)
+        boxHWriteSlopeFile.addWidget(radioButtonWriteSlopeFile)
+
+        boxHWriteXYPointsFile.addWidget(labelWriteXYPointsFile)
+        boxHWriteXYPointsFile.addWidget(radioButtonWriteXYPointsFile)
+
         # Adding widgets to running status & variables horizontal minimal layouts
         boxHECHO.addWidget(labelEcho)
         boxHECHO.addWidget(radioButtonECHO)
@@ -617,7 +776,31 @@ class Window:
         boxV4Layout.addLayout(boxHMEMORYmap)
         boxV4Layout.addLayout(boxHLOGGING)
 
+        # Log file preferences
         boxV4Layout.addWidget(labelLogFilePreferences)
+
+        boxV4Layout.addLayout(boxHLogLandclassSummary)
+        boxV4Layout.addLayout(boxHLogSlopeWeight)
+        boxV4Layout.addLayout(boxHLogReads)
+        boxV4Layout.addLayout(boxHLogWrites)
+        boxV4Layout.addLayout(boxHLogColortables)
+        boxV4Layout.addLayout(boxHLogTransitionMatrix)
+        boxV4Layout.addLayout(boxHLogUrbanizationAttempts)
+        boxV4Layout.addLayout(boxHLogInitialCoefficients)
+        boxV4Layout.addLayout(boxHLogBaseStatistics)
+        boxV4Layout.addLayout(boxHLogDebug)
+        boxV4Layout.addLayout(boxHLogProcessingStatus)
+        boxV4Layout.addLayout(boxHLogTimings)
+        boxV4Layout.addLayout(boxHWorkingGrids)
+        boxV4Layout.addLayout(boxHRandomSeed)
+        boxV4Layout.addLayout(boxHMontecarloIterations)
+        boxV4Layout.addLayout(boxHAuxDiffustionMult)
+        boxV4Layout.addLayout(boxHAuxDiffustionCoeff)
+        boxV4Layout.addLayout(boxHAuxBreedCoeff)
+        boxV4Layout.addLayout(boxHWriteRatioFile)
+        boxV4Layout.addLayout(boxHWriteSlopeFile)
+        boxV4Layout.addLayout(boxHWriteXYPointsFile)
+
         boxV4Layout.addWidget(labelDeltatronAgingSection)
 
         # Setting main front layout
