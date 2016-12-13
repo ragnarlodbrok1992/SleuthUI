@@ -1,54 +1,58 @@
 import PyQt4, sys
 from PyQt4 import QtGui, QtCore
+import window_output_files_color_settings
+import window_deltatron_aging_colortable
+import window_probability_colortable_for_urban_growth
 
 __author__ = 'Maciej Oliwa'
 
 
 class Window:
+    app = QtGui.QApplication(sys.argv)
 
     def __init__(self):
         # Interface initialisation
-        app = QtGui.QApplication(sys.argv)
 
         w = QtGui.QWidget()
         w.resize(1024, 798)
         w.move(0, 0)
         w.setWindowTitle('SleuthUI')
+
         # Setting radiobuttons
-        radioButtonWriteColorKeyImages = QtGui.QRadioButton()
-        radioButtonAnimation = QtGui.QRadioButton()
-        radioButtonViewGrowthTypes = QtGui.QRadioButton()
+        checkBoxWriteColorKeyImages = QtGui.QCheckBox()
+        checkBoxAnimation = QtGui.QCheckBox()
+        checkBoxViewGrowthTypes = QtGui.QCheckBox()
 
-        radioButtonECHO = QtGui.QRadioButton()
-        radioButtonCOEFFile = QtGui.QRadioButton()
-        radioButtonAVGFile = QtGui.QRadioButton()
-        radioButtonSTDDEVFile = QtGui.QRadioButton()
-        radioButtonMEMORYMap = QtGui.QRadioButton()
-        radioButtonLOGGING = QtGui.QRadioButton()
+        checkBoxECHO = QtGui.QCheckBox()
+        checkBoxCOEFFile = QtGui.QCheckBox()
+        checkBoxAVGFile = QtGui.QCheckBox()
+        checkBoxSTDDEVFile = QtGui.QCheckBox()
+        checkBoxMEMORYMap = QtGui.QCheckBox()
+        checkBoxLOGGING = QtGui.QCheckBox()
 
-        radioButtonLogLandclassSummary = QtGui.QRadioButton()
-        radioButtonLogSlopeWeight = QtGui.QRadioButton()
-        radioButtonLogReads = QtGui.QRadioButton()
-        radioButtonLogWrites = QtGui.QRadioButton()
-        radioButtonLogColortables = QtGui.QRadioButton()
-        radioButtonLogTransitionMatrix = QtGui.QRadioButton()
-        radioButtonLogUrbanizationAttempts = QtGui.QRadioButton()
-        radioButtonLogInitialCoefficients = QtGui.QRadioButton()
-        radioButtonLogBaseStatistics = QtGui.QRadioButton()
-        radioButtonLogDebug = QtGui.QRadioButton()
-        radioButtonLogProcessingStatus = QtGui.QRadioButton()
-        radioButtonLogTimings = QtGui.QRadioButton()
-        radioButtonWorkingGrids = QtGui.QRadioButton()
-        radioButtonRandomSeed = QtGui.QRadioButton()
-        radioButtonMontecarloIterations = QtGui.QRadioButton()
-        radioButtonAuxDiffusionMult = QtGui.QRadioButton()
-        radioButtonAuxDiffusionCoeff = QtGui.QRadioButton()
-        radioButtonAuxBreedCoeff = QtGui.QRadioButton()
-        radioButtonWriteRatioFile = QtGui.QRadioButton()
-        radioButtonWriteSlopeFile = QtGui.QRadioButton()
-        radioButtonWriteXYPointsFile = QtGui.QRadioButton()
+        checkBoxLogLandclassSummary = QtGui.QCheckBox()
+        checkBoxLogSlopeWeight = QtGui.QCheckBox()
+        checkBoxLogReads = QtGui.QCheckBox()
+        checkBoxLogWrites = QtGui.QCheckBox()
+        checkBoxLogColortables = QtGui.QCheckBox()
+        checkBoxLogTransitionMatrix = QtGui.QCheckBox()
+        checkBoxLogUrbanizationAttempts = QtGui.QCheckBox()
+        checkBoxLogInitialCoefficients = QtGui.QCheckBox()
+        checkBoxLogBaseStatistics = QtGui.QCheckBox()
+        checkBoxLogDebug = QtGui.QCheckBox()
+        checkBoxLogProcessingStatus = QtGui.QCheckBox()
+        checkBoxLogTimings = QtGui.QCheckBox()
+        checkBoxWorkingGrids = QtGui.QCheckBox()
+        checkBoxRandomSeed = QtGui.QCheckBox()
+        checkBoxMontecarloIterations = QtGui.QCheckBox()
+        checkBoxAuxDiffusionMult = QtGui.QCheckBox()
+        checkBoxAuxDiffusionCoeff = QtGui.QCheckBox()
+        checkBoxAuxBreedCoeff = QtGui.QCheckBox()
+        checkBoxWriteRatioFile = QtGui.QCheckBox()
+        checkBoxWriteSlopeFile = QtGui.QCheckBox()
+        checkBoxWriteXYPointsFile = QtGui.QCheckBox()
 
-        radioButtonViewDeltatronAging = QtGui.QRadioButton()
+        checkBoxViewDeltatronAging = QtGui.QCheckBox()
 
         # Setting buttons
         buttonUrbanDataImage = QtGui.QPushButton()
@@ -546,97 +550,97 @@ class Window:
         # Adding widgets to log file preferences minimal layouts
 
         boxHLogLandclassSummary.addWidget(labelLogLandclassSummary)
-        boxHLogLandclassSummary.addWidget(radioButtonLogLandclassSummary)
+        boxHLogLandclassSummary.addWidget(checkBoxLogLandclassSummary)
 
         boxHLogSlopeWeight.addWidget(labelLogSlopeWeight)
-        boxHLogSlopeWeight.addWidget(radioButtonLogSlopeWeight)
+        boxHLogSlopeWeight.addWidget(checkBoxLogSlopeWeight)
 
         boxHLogReads.addWidget(labelLogReads)
-        boxHLogReads.addWidget(radioButtonLogReads)
+        boxHLogReads.addWidget(checkBoxLogReads)
 
         boxHLogWrites.addWidget(labelLogWrites)
-        boxHLogWrites.addWidget(radioButtonLogWrites)
+        boxHLogWrites.addWidget(checkBoxLogWrites)
 
         boxHLogColortables.addWidget(labelLogColortables)
-        boxHLogColortables.addWidget(radioButtonLogColortables)
+        boxHLogColortables.addWidget(checkBoxLogColortables)
 
         boxHLogTransitionMatrix.addWidget(labelLogTransitionMatrix)
-        boxHLogTransitionMatrix.addWidget(radioButtonLogTransitionMatrix)
+        boxHLogTransitionMatrix.addWidget(checkBoxLogTransitionMatrix)
 
         boxHLogUrbanizationAttempts.addWidget(labelLogUrbanizationAttempts)
-        boxHLogUrbanizationAttempts.addWidget(radioButtonLogUrbanizationAttempts)
+        boxHLogUrbanizationAttempts.addWidget(checkBoxLogUrbanizationAttempts)
 
         boxHLogInitialCoefficients.addWidget(labelLogInitialCoefficients)
-        boxHLogInitialCoefficients.addWidget(radioButtonLogInitialCoefficients)
+        boxHLogInitialCoefficients.addWidget(checkBoxLogInitialCoefficients)
 
         boxHLogBaseStatistics.addWidget(labelLogBaseStatistics)
-        boxHLogBaseStatistics.addWidget(radioButtonLogBaseStatistics)
+        boxHLogBaseStatistics.addWidget(checkBoxLogBaseStatistics)
 
         boxHLogDebug.addWidget(labelLogDebug)
-        boxHLogDebug.addWidget(radioButtonLogDebug)
+        boxHLogDebug.addWidget(checkBoxLogDebug)
 
         boxHLogTimings.addWidget(labelLogTimings)
-        boxHLogTimings.addWidget(radioButtonLogTimings)
+        boxHLogTimings.addWidget(checkBoxLogTimings)
 
         boxHLogProcessingStatus.addWidget(labelLogProcessingStatus)
-        boxHLogProcessingStatus.addWidget(radioButtonLogProcessingStatus)
+        boxHLogProcessingStatus.addWidget(checkBoxLogProcessingStatus)
 
         boxHWorkingGrids.addWidget(labelWorkingGrids)
-        boxHWorkingGrids.addWidget(radioButtonWorkingGrids)
+        boxHWorkingGrids.addWidget(checkBoxWorkingGrids)
 
         boxHRandomSeed.addWidget(labelRandomSeed)
-        boxHRandomSeed.addWidget(radioButtonRandomSeed)
+        boxHRandomSeed.addWidget(checkBoxRandomSeed)
 
         boxHMontecarloIterations.addWidget(labelMontecarloIterations)
-        boxHMontecarloIterations.addWidget(radioButtonMontecarloIterations)
+        boxHMontecarloIterations.addWidget(checkBoxMontecarloIterations)
 
         boxHAuxDiffustionMult.addWidget(labelAuxDiffusionMult)
-        boxHAuxDiffustionMult.addWidget(radioButtonAuxDiffusionMult)
+        boxHAuxDiffustionMult.addWidget(checkBoxAuxDiffusionMult)
 
         boxHAuxDiffustionCoeff.addWidget(labelAuxDiffusionCoeff)
-        boxHAuxDiffustionCoeff.addWidget(radioButtonAuxDiffusionCoeff)
+        boxHAuxDiffustionCoeff.addWidget(checkBoxAuxDiffusionCoeff)
 
         boxHAuxBreedCoeff.addWidget(labelAuxBreedCoeff)
-        boxHAuxBreedCoeff.addWidget(radioButtonAuxBreedCoeff)
+        boxHAuxBreedCoeff.addWidget(checkBoxAuxBreedCoeff)
 
         boxHWriteRatioFile.addWidget(labelWriteRatioFile)
-        boxHWriteRatioFile.addWidget(radioButtonWriteRatioFile)
+        boxHWriteRatioFile.addWidget(checkBoxWriteRatioFile)
 
         boxHWriteSlopeFile.addWidget(labelWriteSlopeFile)
-        boxHWriteSlopeFile.addWidget(radioButtonWriteSlopeFile)
+        boxHWriteSlopeFile.addWidget(checkBoxWriteSlopeFile)
 
         boxHWriteXYPointsFile.addWidget(labelWriteXYPointsFile)
-        boxHWriteXYPointsFile.addWidget(radioButtonWriteXYPointsFile)
+        boxHWriteXYPointsFile.addWidget(checkBoxWriteXYPointsFile)
 
         # Adding widgets to running status & variables horizontal minimal layouts
         boxHECHO.addWidget(labelEcho)
-        boxHECHO.addWidget(radioButtonECHO)
+        boxHECHO.addWidget(checkBoxECHO)
 
         boxHCOEFFile.addWidget(labelCOEFFile)
-        boxHCOEFFile.addWidget(radioButtonCOEFFile)
+        boxHCOEFFile.addWidget(checkBoxCOEFFile)
 
         boxHAVGFile.addWidget(labelAVGFile)
-        boxHAVGFile.addWidget(radioButtonAVGFile)
+        boxHAVGFile.addWidget(checkBoxAVGFile)
 
         boxHSTDDEVFile.addWidget(labelSTDDEVFile)
-        boxHSTDDEVFile.addWidget(radioButtonSTDDEVFile)
+        boxHSTDDEVFile.addWidget(checkBoxSTDDEVFile)
 
         boxHMEMORYmap.addWidget(labelMEMORYmap)
-        boxHMEMORYmap.addWidget(radioButtonMEMORYMap)
+        boxHMEMORYmap.addWidget(checkBoxMEMORYMap)
 
         boxHLOGGING.addWidget(labelLOGGING)
-        boxHLOGGING.addWidget(radioButtonLOGGING)
+        boxHLOGGING.addWidget(checkBoxLOGGING)
 
         # Adding widgets to output images horizontal minimal layouts
         boxHWriteColorKeyImages.addWidget(labelWriteColorKeyImages)
-        boxHWriteColorKeyImages.addWidget(radioButtonWriteColorKeyImages)
+        boxHWriteColorKeyImages.addWidget(checkBoxWriteColorKeyImages)
         boxHWriteColorKeyImages.addWidget(buttonOutputFilesColorSettings)
 
         boxHAnimation.addWidget(labelAnimation)
-        boxHAnimation.addWidget(radioButtonAnimation)
+        boxHAnimation.addWidget(checkBoxAnimation)
 
         boxHViewGrowthTypes.addWidget(labelViewGrowthTypes)
-        boxHViewGrowthTypes.addWidget(radioButtonViewGrowthTypes)
+        boxHViewGrowthTypes.addWidget(checkBoxViewGrowthTypes)
 
         boxHGrowthTypeWindow.addWidget(labelGrowthTypePrintWindow)
         boxHGrowthTypeWindow.addWidget(lineEditStartRun)
@@ -721,7 +725,7 @@ class Window:
         boxHPredRoadBestFit.addWidget(lineEditPredRoadBestFit)
 
         boxHViewDeltatronAging.addWidget(labelViewDeltatronAging)
-        boxHViewDeltatronAging.addWidget(radioButtonViewDeltatronAging)
+        boxHViewDeltatronAging.addWidget(checkBoxViewDeltatronAging)
 
         boxHDeltatronPrintWindow.addWidget(lineEditStartRunDeltatron)
         boxHDeltatronPrintWindow.addWidget(lineEditEndRunDeltatron)
@@ -923,5 +927,18 @@ class Window:
         buttonBackgroundDataImage.clicked.connect(lambda: selectfilebackgrounddata())
 
         # New window button operations
+        buttonOutputFilesColorSettings.clicked.connect(lambda: self.outputFilesColorSettingsButtonClicked())
+        buttonDeltatronAgingColortable.clicked.connect(lambda: self.deltatronAgingColortableButtonClicked())
+        buttonProbabilityColorSettings.clicked.connect(lambda: self.probabilityColortableForUrbanGrowthClicked())
 
-        sys.exit(app.exec_())
+        sys.exit(self.app.exec_())
+
+    def outputFilesColorSettingsButtonClicked(self):
+        print "Clicked button output files color settings button"
+        windowOutputFiles = window_output_files_color_settings.WindowOutputFilesColorSettings()
+
+    def deltatronAgingColortableButtonClicked(self):
+        print "Deltatron aging colortable button clicked"
+
+    def probabilityColortableForUrbanGrowthClicked(self):
+        print "Probability colortable for urban growth clicked"

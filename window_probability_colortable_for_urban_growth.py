@@ -5,5 +5,5 @@ __author__ = 'Maciej Oliwa'
 
 
 class WindowProbabilityColortableForUrbanGrowth:
-    def __init__(self):
+    def __init__(self, app):
         pass

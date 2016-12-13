@@ -5,5 +5,5 @@ __author__ = 'Maciej Oliwa'
 
 
 class WindowDeltatronAgingColortable:
-    def __init__(self):
+    def __init__(self, app):
         pass
