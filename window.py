@@ -48,6 +48,8 @@ class Window:
         radioButtonWriteSlopeFile = QtGui.QRadioButton()
         radioButtonWriteXYPointsFile = QtGui.QRadioButton()
 
+        radioButtonViewDeltatronAging = QtGui.QRadioButton()
+
         # Setting buttons
         buttonUrbanDataImage = QtGui.QPushButton()
         buttonUrbanDataImage.setText("Wybierz z dysku")
@@ -61,6 +63,15 @@ class Window:
         buttonSlopeDataImage.setText("Wybierz z dysku")
         buttonBackgroundDataImage = QtGui.QPushButton()
         buttonBackgroundDataImage.setText("Wybierz z dysku")
+
+        # Setting output images buttons
+        buttonOutputFilesColorSettings = QtGui.QPushButton()
+        buttonOutputFilesColorSettings.setText("Output File Color Settings")
+        buttonProbabilityColorSettings = QtGui.QPushButton()
+        buttonProbabilityColorSettings.setText("Probability Colortable Color Settings")
+
+        buttonDeltatronAgingColortable = QtGui.QPushButton()
+        buttonDeltatronAgingColortable.setText("Color settings for deltatron aging")
 
         # Setting Labels
         labelSleuthModel = QtGui.QLabel()
@@ -161,6 +172,10 @@ class Window:
         labelWriteRatioFile = QtGui.QLabel()
         labelWriteSlopeFile = QtGui.QLabel()
         labelWriteXYPointsFile = QtGui.QLabel()
+
+        # Deltatron labels
+        labelViewDeltatronAging = QtGui.QLabel()
+        labelDeltatronPrintWindow = QtGui.QLabel()
 
         # Setting label texts
         labelSleuthModel.setText("SLEUTH Model: ")
@@ -273,6 +288,8 @@ class Window:
         labelBoom.setText("BOOM")
         labelBust.setText("BUST")
 
+
+
         # Setting lineEdits
         lineEditSleuthModelName = QtGui.QLineEdit()
         lineEditSimulation = QtGui.QLineEdit()
@@ -298,6 +315,33 @@ class Window:
         lineEditSimulation.setText("Nazwa scenariusza")
         lineEditModelDate.setText("1.1.1970")
         lineEditSimulationDate.setText("1.1.1970")
+
+        # Growth type print window edit lines
+        lineEditStartRun = QtGui.QLineEdit()
+        lineEditStartRun.setText("Start run")
+        lineEditEndRun = QtGui.QLineEdit()
+        lineEditEndRun.setText("End run")
+        lineEditStartMc = QtGui.QLineEdit()
+        lineEditStartMc.setText("Start mc")
+        lineEditEndMc = QtGui.QLineEdit()
+        lineEditEndMc.setText("End mc")
+        lineEditStartYear = QtGui.QLineEdit()
+        lineEditStartYear.setText("Start year")
+        lineEditEndYear = QtGui.QLineEdit()
+        lineEditEndYear.setText("End year")
+
+        lineEditStartRunDeltatron = QtGui.QLineEdit()
+        lineEditStartRunDeltatron.setText("Start run")
+        lineEditEndRunDeltatron = QtGui.QLineEdit()
+        lineEditEndRunDeltatron.setText("End run")
+        lineEditStartMcDeltatron = QtGui.QLineEdit()
+        lineEditStartMcDeltatron.setText("Start mc")
+        lineEditEndMcDeltatron = QtGui.QLineEdit()
+        lineEditEndMcDeltatron.setText("End mc")
+        lineEditStartYearDeltatron = QtGui.QLineEdit()
+        lineEditStartYearDeltatron.setText("Start year")
+        lineEditEndYearDeltatron = QtGui.QLineEdit()
+        lineEditEndYearDeltatron.setText("End year")
 
         # Input images edit lines
         lineEditUrbanImage = QtGui.QLineEdit()
@@ -425,6 +469,7 @@ class Window:
         boxHAnimation = QtGui.QHBoxLayout()
         boxHViewGrowthTypes = QtGui.QHBoxLayout()
         boxHGrowthTypeWindow = QtGui.QHBoxLayout()
+        boxHProbabilityColorSettings = QtGui.QHBoxLayout()
 
         # Setting running status & variables minimal horizontal layouts
         boxHECHO = QtGui.QHBoxLayout()
@@ -493,6 +538,11 @@ class Window:
         boxHWriteSlopeFile = QtGui.QHBoxLayout()
         boxHWriteXYPointsFile = QtGui.QHBoxLayout()
 
+        # Deltatron aging section horizontal layouts
+        boxHViewDeltatronAging = QtGui.QHBoxLayout()
+        boxHDeltatronPrintWindow = QtGui.QHBoxLayout()
+        boxHColorSettingsDeltatron = QtGui.QHBoxLayout()
+
         # Adding widgets to log file preferences minimal layouts
 
         boxHLogLandclassSummary.addWidget(labelLogLandclassSummary)
@@ -524,6 +574,9 @@ class Window:
 
         boxHLogDebug.addWidget(labelLogDebug)
         boxHLogDebug.addWidget(radioButtonLogDebug)
+
+        boxHLogTimings.addWidget(labelLogTimings)
+        boxHLogTimings.addWidget(radioButtonLogTimings)
 
         boxHLogProcessingStatus.addWidget(labelLogProcessingStatus)
         boxHLogProcessingStatus.addWidget(radioButtonLogProcessingStatus)
@@ -577,6 +630,7 @@ class Window:
         # Adding widgets to output images horizontal minimal layouts
         boxHWriteColorKeyImages.addWidget(labelWriteColorKeyImages)
         boxHWriteColorKeyImages.addWidget(radioButtonWriteColorKeyImages)
+        boxHWriteColorKeyImages.addWidget(buttonOutputFilesColorSettings)
 
         boxHAnimation.addWidget(labelAnimation)
         boxHAnimation.addWidget(radioButtonAnimation)
@@ -585,6 +639,14 @@ class Window:
         boxHViewGrowthTypes.addWidget(radioButtonViewGrowthTypes)
 
         boxHGrowthTypeWindow.addWidget(labelGrowthTypePrintWindow)
+        boxHGrowthTypeWindow.addWidget(lineEditStartRun)
+        boxHGrowthTypeWindow.addWidget(lineEditEndRun)
+        boxHGrowthTypeWindow.addWidget(lineEditStartMc)
+        boxHGrowthTypeWindow.addWidget(lineEditEndMc)
+
+        boxHProbabilityColorSettings.addWidget(buttonProbabilityColorSettings)
+        boxHProbabilityColorSettings.addWidget(lineEditStartYear)
+        boxHProbabilityColorSettings.addWidget(lineEditEndYear)
 
         # Adding widgets to input images horizontal mini layouts
         boxHUrbanLayout.addWidget(labelUrbanImage)
@@ -658,6 +720,18 @@ class Window:
         boxHPredRoadBestFit.addWidget(labelPredRoadBestFit)
         boxHPredRoadBestFit.addWidget(lineEditPredRoadBestFit)
 
+        boxHViewDeltatronAging.addWidget(labelViewDeltatronAging)
+        boxHViewDeltatronAging.addWidget(radioButtonViewDeltatronAging)
+
+        boxHDeltatronPrintWindow.addWidget(lineEditStartRunDeltatron)
+        boxHDeltatronPrintWindow.addWidget(lineEditEndRunDeltatron)
+        boxHDeltatronPrintWindow.addWidget(lineEditStartMcDeltatron)
+        boxHDeltatronPrintWindow.addWidget(lineEditEndMcDeltatron)
+
+        boxHColorSettingsDeltatron.addWidget(buttonDeltatronAgingColortable)
+        boxHColorSettingsDeltatron.addWidget(lineEditStartYearDeltatron)
+        boxHColorSettingsDeltatron.addWidget(lineEditEndYearDeltatron)
+
         # Adding widgets to self-modification parameters horizontal mini
         # layouts
         boxHRoadGravSensitivity.addWidget(labelRoadGravSensitivity)
@@ -723,6 +797,7 @@ class Window:
         boxV1Layout.addLayout(boxHAnimation)
         boxV1Layout.addLayout(boxHViewGrowthTypes)
         boxV1Layout.addLayout(boxHGrowthTypeWindow)
+        boxV1Layout.addLayout(boxHProbabilityColorSettings)
 
         # Vertical 3 layout
         boxV3Layout.addWidget(labelPredictionRange)
@@ -803,6 +878,10 @@ class Window:
 
         boxV4Layout.addWidget(labelDeltatronAgingSection)
 
+        boxV4Layout.addLayout(boxHViewDeltatronAging)
+        boxV4Layout.addLayout(boxHDeltatronPrintWindow)
+        boxV4Layout.addLayout(boxHColorSettingsDeltatron)
+
         # Setting main front layout
         boxH2Layout.addLayout(boxV1Layout)
         boxH2Layout.addLayout(boxV3Layout)
@@ -843,6 +922,6 @@ class Window:
         buttonSlopeDataImage.clicked.connect(lambda: selectfileslopedata())
         buttonBackgroundDataImage.clicked.connect(lambda: selectfilebackgrounddata())
 
-        sys.exit(app.exec_())
+        # New window button operations
 
-        # Button operations
+        sys.exit(app.exec_())
