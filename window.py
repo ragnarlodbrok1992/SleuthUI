@@ -199,6 +199,7 @@ class Window:
         labelSelfModificationParameters.setText("SELF-MODIFICATION PARAMETERS")
         labelLogFilePreferences.setText("LOG FILE preferences")
         labelDeltatronAgingSection.setText("DELTATRON AGING SECTION")
+        labelDeltatronPrintWindow.setText("DELTATRON PRINT WINDOW")
         labelWriteColorKeyImages.setText("WRITE COLOR KEY IMAGES")
         labelAnimation.setText("ANIMATION")
         labelViewGrowthTypes.setText("VIEW GROWTH TYPES(YES/NO)")
@@ -727,6 +728,7 @@ class Window:
         boxHViewDeltatronAging.addWidget(labelViewDeltatronAging)
         boxHViewDeltatronAging.addWidget(checkBoxViewDeltatronAging)
 
+        boxHDeltatronPrintWindow.addWidget(labelDeltatronPrintWindow)
         boxHDeltatronPrintWindow.addWidget(lineEditStartRunDeltatron)
         boxHDeltatronPrintWindow.addWidget(lineEditEndRunDeltatron)
         boxHDeltatronPrintWindow.addWidget(lineEditStartMcDeltatron)
@@ -900,7 +902,7 @@ class Window:
         # Def of operations
         fileDialog = QtGui.QFileDialog
 
-        def selectfileurban():
+        def selectfileurban(self):
             lineEditUrbanImage.setText(fileDialog.getOpenFileName())
 
         def selectfileroaddata():
@@ -917,6 +919,7 @@ class Window:
 
         def selectfilebackgrounddata():
             lineEditBackgroundDataImage.setText(fileDialog.getOpenFileName())
+
 
         # Button operations
         buttonUrbanDataImage.clicked.connect(lambda: selectfileurban())
@@ -935,10 +938,16 @@ class Window:
 
     def outputFilesColorSettingsButtonClicked(self):
         print "Clicked button output files color settings button"
-        windowOutputFiles = window_output_files_color_settings.WindowOutputFilesColorSettings()
+        windowOutputFiles = window_output_files_color_settings.WindowOutputFilesColorSettings(self.app)
+        return windowOutputFiles
 
     def deltatronAgingColortableButtonClicked(self):
         print "Deltatron aging colortable button clicked"
+        windowDeltatronAgingColortable = window_deltatron_aging_colortable.WindowDeltatronAgingColortable(self.app)
+        return windowDeltatronAgingColortable
 
     def probabilityColortableForUrbanGrowthClicked(self):
         print "Probability colortable for urban growth clicked"
+        windowProbabilityColortableForUrbanGrowth = window_probability_colortable_for_urban_growth.WindowProbabilityColortableForUrbanGrowth(
+            self.app)
+        return windowProbabilityColortableForUrbanGrowth

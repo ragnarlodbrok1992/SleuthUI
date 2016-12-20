@@ -5,7 +5,7 @@ __author__ = 'Maciej Oliwa'
 
 
 class WindowOutputFilesColorSettings:
-    def __init__(self):
+    def __init__(self, app):
         self.w = QtGui.QWidget()
         self.w.resize(200, 200)
         self.w.move(100, 100)
