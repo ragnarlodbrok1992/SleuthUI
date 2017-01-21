@@ -9,6 +9,12 @@ __author__ = 'Maciej Oliwa'
 
 class Window:
     app = QtGui.QApplication(sys.argv)
+    WindowOutputFilesColorSettings = window_output_files_color_settings. \
+        WindowOutputFilesColorSettings(app)
+    WindowDeltatronAgingColortable = window_deltatron_aging_colortable. \
+        WindowDeltatronAgingColortable(app)
+    WindowProbabilityColortableForUrbanGrowth = window_probability_colortable_for_urban_growth. \
+        WindowProbabilityColortableForUrbanGrowth(app)
 
     def __init__(self):
         # Interface initialisation
@@ -937,17 +943,10 @@ class Window:
         sys.exit(self.app.exec_())
 
     def outputFilesColorSettingsButtonClicked(self):
-        print "Clicked button output files color settings button"
-        windowOutputFiles = window_output_files_color_settings.WindowOutputFilesColorSettings(self.app)
-        return windowOutputFiles
+        Window.WindowOutputFilesColorSettings.w.show()
 
     def deltatronAgingColortableButtonClicked(self):
-        print "Deltatron aging colortable button clicked"
-        windowDeltatronAgingColortable = window_deltatron_aging_colortable.WindowDeltatronAgingColortable(self.app)
-        return windowDeltatronAgingColortable
+        Window.WindowDeltatronAgingColortable.w.show()
 
     def probabilityColortableForUrbanGrowthClicked(self):
-        print "Probability colortable for urban growth clicked"
-        windowProbabilityColortableForUrbanGrowth = window_probability_colortable_for_urban_growth.WindowProbabilityColortableForUrbanGrowth(
-            self.app)
-        return windowProbabilityColortableForUrbanGrowth
+        Window.WindowProbabilityColortableForUrbanGrowth.w.show()

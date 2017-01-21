@@ -8,6 +8,5 @@ class WindowOutputFilesColorSettings:
     def __init__(self, app):
         self.w = QtGui.QWidget()
         self.w.resize(200, 200)
-        self.w.move(100, 100)
+        self.w.move(350, 150)
         self.w.setWindowTitle('Output files color settings')
-        self.w.show()

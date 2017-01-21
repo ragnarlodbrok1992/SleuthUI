@@ -8,6 +8,5 @@ class WindowDeltatronAgingColortable:
     def __init__(self, app):
         self.w = QtGui.QWidget()
         self.w.resize(200, 200)
-        self.w.move(100, 100)
+        self.w.move(150, 150)
         self.w.setWindowTitle('Deltatron aging colortable')
-        self.w.show()
