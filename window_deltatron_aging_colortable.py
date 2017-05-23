@@ -10,3 +10,7 @@ class WindowDeltatronAgingColortable:
         self.w.resize(200, 200)
         self.w.move(150, 150)
         self.w.setWindowTitle('Deltatron aging colortable')
+        self._populate_window()
+
+    def _populate_window(self):
+        labelDeltatronAgingColortable = QtGui.QLabel("DELTATRON AGING COLORTABLE")
