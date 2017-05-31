@@ -22,7 +22,7 @@ class Window:
         # Setting radiobuttons
         self.radiobuttons = dict()
         radiobuttons_names = [''.join([elements_container.radiobuttons_name_prefix,
-                                       elements_container.radiobuttons_name_postfix[x]])
+                                       elements_container.radiobuttons_name_postfix[x][0]])
                               for x in range(0, len(elements_container.radiobuttons_name_postfix))]
         for name in radiobuttons_names:
             self.radiobuttons[name] = QtGui.QCheckBox()
@@ -72,7 +72,25 @@ class Window:
         del x
 
     def _set_layouts(self):
-        pass
+        # Layout desing
+        # TopRow
+        # (LeftColumn - CentreColumn - RightColumn) - within MiddleRowLayout
+        # BottomRow
+
+        self.mainLayout = QtGui.QVBoxLayout()
+        topRowLayout = QtGui.QHBoxLayout()
+        middleRowLayout = QtGui.QHBoxLayout()
+        bottomRowLayout = QtGui.QHBoxLayout()
+
+        leftColumnLayout = QtGui.QFormLayout()
+        middleColumnLayout = QtGui.QFormLayout()
+        rightColumnLayout = QtGui.QFormLayout()
+
+        for _ in [leftColumnLayout, middleColumnLayout, rightColumnLayout]:
+            middleRowLayout.addLayout(_)
+
+        for _ in [topRowLayout, middleRowLayout, bottomRowLayout]:
+            self.mainLayout.addLayout(_)
 
     def __init__(self):
         # Interface initialisation
@@ -86,7 +104,11 @@ class Window:
 
         self._set_layouts()
 
+        w.setLayout(self.mainLayout)
         w.show()
+
+        # DEBUG CODE
+
 
         sys.exit(self.app.exec_())
 
