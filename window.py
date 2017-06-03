@@ -86,6 +86,23 @@ class Window:
         middleColumnLayout = QtGui.QFormLayout()
         rightColumnLayout = QtGui.QFormLayout()
 
+        # Add elements into columns
+        print self.labels
+        for label in elements_container.labels_name_postfix_and_text:
+            print self.labels[str('label' + label[0])]
+            print label[2]
+            if label[2] == 'topRow':
+                print 'found'
+                topRowLayout.addWidget(self.labels[str('label' + label[0])])
+            elif label[2] == 'bottomRow':
+                bottomRowLayout.addWidget(self.labels[str('label') + label[0]])
+            elif label[2] == 'leftColumn':
+                leftColumnLayout.addRow(self.labels[str('label') + label[0]])
+            elif label[2] == 'rightColumn':
+                rightColumnLayout.addRow(self.labels[str('label') + label[0]])
+            elif label[2] == 'middleColumn':
+                middleColumnLayout.addRow(self.labels[str('label') + label[0]])
+
         for _ in [leftColumnLayout, middleColumnLayout, rightColumnLayout]:
             middleRowLayout.addLayout(_)
 

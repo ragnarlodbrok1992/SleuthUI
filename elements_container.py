@@ -146,7 +146,7 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow'),
                                 ('WriteXYPointsFile', 'WRITE_XYPOINTS_FILE', 'rightColumn'),
                                 ('ViewDeltatronAging', 'VIEW_DELTATRON_AGING', 'rightColumn'),
                                 ('DeltatronPrintWindow', 'DELTATRON_PRINT_WINDOW', 'rightColumn'),
-                                ('ColorSettingsButtons', 'Color settings buttons: ', 'bottowmRow')]
+                                ('ColorSettingsButtons', 'Color settings buttons: ', 'bottomRow')]
 
 labels_qt_align_center = ['labelInputOutputDirectoryMain',
                           'labelPredictionRange',
