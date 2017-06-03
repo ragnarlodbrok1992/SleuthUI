@@ -18,12 +18,21 @@ class Window:
         WindowProbabilityColortableForUrbanGrowth(app)
 
     def _set_button_functions(self):
+        # Buttons for files
         self.buttons['buttonUrbanDataImage'].clicked.connect(lambda: self.selectfileurban())
         self.buttons['buttonRoadDataImage'].clicked.connect(lambda: self.selectfileroaddata())
         self.buttons['buttonLanduseDataImage'].clicked.connect(lambda: self.selectfilelandusedata())
         self.buttons['buttonExcludedDataImage'].clicked.connect(lambda: self.selectfileexcludeddata())
         self.buttons['buttonSlopeDataImage'].clicked.connect(lambda: self.selectfileslopedata())
         self.buttons['buttonBackgroundDataImage'].clicked.connect(lambda: self.selectfilebackgrounddata())
+
+        # Buttons new window functions
+        self.buttons['buttonOutputFilesColorSettings'].clicked.connect(lambda:
+                                                                       self.buttonOutputFilesColorSettingsClicked())
+        self.buttons['buttonDeltatronAgingColortable'].clicked.connect(lambda:
+                                                                       self.buttonDeltatronAgingColortableClicked())
+        self.buttons['buttonProbabilityColorSettings'].clicked.connect(lambda:
+                                                                       self.buttonProbabilityColorSettingsClicked())
 
     def _populate_window(self):
 
