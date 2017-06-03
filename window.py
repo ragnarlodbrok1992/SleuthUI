@@ -82,9 +82,11 @@ class Window:
             self.line_edits[name] = QtGui.QLineEdit()
             self.line_edits[name].setText(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][1])
             if elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2] is not None:
-                self.line_edits[name].setFixedWidth(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2])
+                self.line_edits[name].\
+                    setFixedWidth(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2])
             if elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3] is not None:
-                self.line_edits[name].setMaxLength(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3])
+                self.line_edits[name].\
+                    setMaxLength(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3])
             x += 1
         del x
 
