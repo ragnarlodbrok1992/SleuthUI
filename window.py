@@ -56,23 +56,23 @@ class Window:
             self.labels[name].setAlignment(QtCore.Qt.AlignCenter)
 
         # Setting lineEdits
-        line_edits = dict()
+        self.line_edits = dict()
         line_edits_names = [''.join([elements_container.line_edits_name_prefix,
                                      elements_container.line_edits_name_postfix_and_text_width_maxlength[x][0]])
                             for x in range(0, len(elements_container.line_edits_name_postfix_and_text_width_maxlength))]
         x = 0
         for name in line_edits_names:
-            line_edits[name] = QtGui.QLineEdit()
-            line_edits[name].setText(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][1])
+            self.line_edits[name] = QtGui.QLineEdit()
+            self.line_edits[name].setText(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][1])
             if elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2] is not None:
-                line_edits[name].setFixedWidth(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2])
+                self.line_edits[name].setFixedWidth(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][2])
             if elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3] is not None:
-                line_edits[name].setMaxLength(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3])
+                self.line_edits[name].setMaxLength(elements_container.line_edits_name_postfix_and_text_width_maxlength[x][3])
             x += 1
         del x
 
     def _set_layouts(self):
-        # Layout desing
+        # Layout design
         # TopRow
         # (LeftColumn - CentreColumn - RightColumn) - within MiddleRowLayout
         # BottomRow
@@ -87,21 +87,29 @@ class Window:
         rightColumnLayout = QtGui.QFormLayout()
 
         # Add elements into columns
-        print self.labels
+        space_dict = {'leftColumn': leftColumnLayout,
+                      'rightColumn': rightColumnLayout,
+                      'middleColumn': middleColumnLayout,
+                      'topRow': topRowLayout,
+                      'bottomRow': bottomRowLayout}
         for label in elements_container.labels_name_postfix_and_text:
-            print self.labels[str('label' + label[0])]
-            print label[2]
-            if label[2] == 'topRow':
-                print 'found'
-                topRowLayout.addWidget(self.labels[str('label' + label[0])])
-            elif label[2] == 'bottomRow':
-                bottomRowLayout.addWidget(self.labels[str('label') + label[0]])
-            elif label[2] == 'leftColumn':
-                leftColumnLayout.addRow(self.labels[str('label') + label[0]])
-            elif label[2] == 'rightColumn':
-                rightColumnLayout.addRow(self.labels[str('label') + label[0]])
-            elif label[2] == 'middleColumn':
-                middleColumnLayout.addRow(self.labels[str('label') + label[0]])
+            for space in space_dict:
+                if label[2] == space:
+                    row_right = list()
+                    rowLayout = QtGui.QHBoxLayout()
+                    if label.__len__() > 3:
+                        for _ in [self.line_edits, self.buttons, self.radiobuttons]:
+                            for key in _.viewkeys():
+                                if key in label[3:]:
+                                    row_right.append(_[str(key)])
+                    if row_right:
+                        for row in row_right:
+                            rowLayout.addWidget(row)
+                    if type(space_dict[space]) is QtGui.QHBoxLayout:
+                        space_dict[space].addWidget(self.labels[str('label') + label[0]])
+                        space_dict[space].addLayout(rowLayout)
+                    elif type(space_dict[space]) is QtGui.QFormLayout:
+                        space_dict[space].addRow(self.labels[str('label') + label[0]], rowLayout)
 
         for _ in [leftColumnLayout, middleColumnLayout, rightColumnLayout]:
             middleRowLayout.addLayout(_)
