@@ -17,6 +17,14 @@ class Window:
     WindowProbabilityColortableForUrbanGrowth = window_probability_colortable_for_urban_growth. \
         WindowProbabilityColortableForUrbanGrowth(app)
 
+    def _set_button_functions(self):
+        self.buttons['buttonUrbanDataImage'].clicked.connect(lambda: self.selectfileurban())
+        self.buttons['buttonRoadDataImage'].clicked.connect(lambda: self.selectfileroaddata())
+        self.buttons['buttonLanduseDataImage'].clicked.connect(lambda: self.selectfilelandusedata())
+        self.buttons['buttonExcludedDataImage'].clicked.connect(lambda: self.selectfileexcludeddata())
+        self.buttons['buttonSlopeDataImage'].clicked.connect(lambda: self.selectfileslopedata())
+        self.buttons['buttonBackgroundDataImage'].clicked.connect(lambda: self.selectfilebackgrounddata())
+
     def _populate_window(self):
 
         # Setting radiobuttons
@@ -117,6 +125,33 @@ class Window:
         for _ in [topRowLayout, middleRowLayout, bottomRowLayout]:
             self.mainLayout.addLayout(_)
 
+    def selectfileurban(self):
+        self.line_edits['lineEditUrbanImage'].setText(self.fileDialog.getOpenFileName())
+
+    def selectfileroaddata(self):
+        self.line_edits['lineEditRoadDataImage'].setText(self.fileDialog.getOpenFileName())
+
+    def selectfilelandusedata(self):
+        self.line_edits['lineEditLanduseDataImage'].setText(self.fileDialog.getOpenFileName())
+
+    def selectfileexcludeddata(self):
+        self.line_edits['lineEditExcludedDataImage'].setText(self.fileDialog.getOpenFileName())
+
+    def selectfileslopedata(self):
+        self.line_edits['lineEditSlopeDataImage'].setText(self.fileDialog.getOpenFileName())
+
+    def selectfilebackgrounddata(self):
+        self.line_edits['lineEditBackgroundDataImage'].setText(self.fileDialog.getOpenFileName())
+
+    def buttonOutputFilesColorSettingsClicked(self):
+        Window.WindowOutputFilesColorSettings.w.show()
+
+    def buttonDeltatronAgingColortableClicked(self):
+        Window.WindowDeltatronAgingColortable.w.show()
+
+    def buttonProbabilityColorSettingsClicked(self):
+        Window.WindowProbabilityColortableForUrbanGrowth.w.show()
+
     def __init__(self):
         # Interface initialisation
 
@@ -125,23 +160,15 @@ class Window:
         w.move(0, 0)
         w.setWindowTitle('SleuthUI')
 
+        # Initialization methods
         self._populate_window()
-
         self._set_layouts()
+        self._set_button_functions()
 
         w.setLayout(self.mainLayout)
         w.show()
 
         # DEBUG CODE
 
-
+        self.fileDialog = QtGui.QFileDialog
         sys.exit(self.app.exec_())
-
-    def outputFilesColorSettingsButtonClicked(self):
-        Window.WindowOutputFilesColorSettings.w.show()
-
-    def deltatronAgingColortableButtonClicked(self):
-        Window.WindowDeltatronAgingColortable.w.show()
-
-    def probabilityColortableForUrbanGrowthClicked(self):
-        Window.WindowProbabilityColortableForUrbanGrowth.w.show()
