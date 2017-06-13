@@ -105,12 +105,20 @@ class Window:
         middleColumnLayout = QtGui.QFormLayout()
         rightColumnLayout = QtGui.QFormLayout()
 
+        topRightColumnLayout = QtGui.QHBoxLayout()
+        middleRightColumnLayout = QtGui.QHBoxLayout()
+        bottomRightColumnLayout = QtGui.QHBoxLayout()
+
         # Add elements into columns
         space_dict = {'leftColumn': leftColumnLayout,
                       'rightColumn': rightColumnLayout,
                       'middleColumn': middleColumnLayout,
                       'topRow': topRowLayout,
-                      'bottomRow': bottomRowLayout}
+                      'bottomRow': bottomRowLayout,
+                      'topRightColumn': topRightColumnLayout,
+                      'middleRightColumnLayout': middleRightColumnLayout,
+                      'bottomRightColumnLayout': bottomRightColumnLayout}
+
         for label in elements_container.labels_name_postfix_and_text:
             for space in space_dict:
                 if label[2] == space:
@@ -129,6 +137,9 @@ class Window:
                         space_dict[space].addLayout(rowLayout)
                     elif type(space_dict[space]) is QtGui.QFormLayout:
                         space_dict[space].addRow(self.labels[str('label') + label[0]], rowLayout)
+
+        for _ in [topRightColumnLayout, middleRightColumnLayout, bottomRightColumnLayout]:
+            rightColumnLayout.addRow(_)
 
         for _ in [leftColumnLayout, middleColumnLayout, rightColumnLayout]:
             middleRowLayout.addLayout(_)
