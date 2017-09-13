@@ -9,12 +9,13 @@ make
 echo ROOT DIR IS: ${ROOT_DIR}
 
 main () {
-cd ${ROOT_DIR}/SLEUTHGA/Whirlgif
+cd "${ROOT_DIR}/SLEUTHGA/Whirlgif"
 compile
-cd ${ROOT_DIR}/SLEUTHGA/GD
+cd "${ROOT_DIR}/SLEUTHGA/GD"
 compile
-cd ${ROOT_DIR}/SLEUTHGA
+cd "${ROOT_DIR}/SLEUTHGA"
 compile
+cd "${ROOT_DIR}"
 }
 
 # Main flow of script
