@@ -1,0 +1,16 @@
+# Compiling instructions for SLEUTHGA algorithm
+
+Compiling is done with Cygwin terminal with installed gcc compiler
+on Windows 10 machine
+
+1. Go to Whirlgif directory
+2. Command: make clean
+3. Command: make
+4. Go to GD directory
+5. Command: make clean
+6. Command: make
+7. Go to main directory
+8. Command: make clean
+9. Command: make
+
+Sleuth should now be ready to use with grow exe program
