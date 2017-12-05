@@ -36,7 +36,9 @@ radiobuttons_name_postfix = [('ColorKeyImages', ''),
                              ('WriteRatioFile', ''),
                              ('WriteSlopeFile', ''),
                              ('WriteXYPointsFile', ''),
-                             ('ViewDeltatronAging', '')]
+                             ('ViewDeltatronAging', ''),
+                             ('WriteColorKeyImages', ''),
+                             ('Animation', '')]
 
 # Setting buttons
 buttons_name_prefix = 'button'
@@ -58,7 +60,9 @@ buttons_name_postfix_and_text = [('UrbanDataImage', 'Wybierz z dysku'),
                                  ('DeltatronAgingColortable',
                                   'Color settings for deltatron aging',
                                   'labelColorsSettingsButtons',
-                                  '')]
+                                  ''),
+                                 ('Save', 'Save'),
+                                 ('Exit', 'Exit')]
 
 # Setting labels
 # Attach element to label
@@ -75,12 +79,6 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow', 'lin
                                 ('StartDate', 'START Date: ', 'middleColumn', 'lineEditStartDate'),
                                 ('StopDate', 'STOP Date: ', 'middleColumn', 'lineEditStopDate'),
                                 ('Coefficients', 'COEFFICIENTS', 'middleColumn'),
-                                ('DeltatronAgingSection', 'DELTATRON AGING SECTION', 'rightColumn'),
-                                ('WriteColorKeyImages', 'WRITE COLOR KEY IMAGES',
-                                 'leftColumn', 'checkBoxColorKeyImages'),
-                                ('Animation', 'ANIMATION', 'leftColumn', 'checkBoxAnimation'),
-                                ('ViewGrowthTypes', 'VIEW GROWTH TYPES (YES/NO)',
-                                 'leftColumn', 'checkBoxViewGrowthTypes'),
                                 ('GrowthTypePrintWindow', 'GROWTH TYPE PRINT WINDOW', 'leftColumn',
                                  'lineEditStartRun', 'lineEditEndRun', 'lineEditStartMc', 'lineEditEndMc',
                                  'lineEditStartYear', 'lineEditEndYear'),
@@ -182,15 +180,22 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow', 'lin
                                 ('WriteSlopeFile', 'WRITE_SLOPE_FILE', 'rightColumn', 'checkBoxWriteSlopeFile'),
                                 ('WriteXYPointsFile', 'WRITE_XYPOINTS_FILE', 'rightColumn',
                                  'checkBoxWriteXYPointsFile'),
-                                ('DeltatronPrintWindow', 'DELTATRON_PRINT_WINDOW', 'rightColumn'),
+                                ('DeltatronAgingSection', 'DELTATRON_AGING_SECTION', 'rightColumn'),
                                 ('ColorSettingsButtons', 'Color settings buttons: ', 'bottomRow',
                                  'buttonOutputFilesColorSettings', 'buttonProbabilityColorSettings',
                                  'buttonDeltatronAgingColortable'),
                                 ('ViewDeltatronAging', 'VIEW_DELTATRON_AGING', 'rightColumn',
                                  'checkBoxViewDeltatronAging'),
-                                ('OutputImages', 'OUTPUT IMAGES', 'leftColumn', 'labelOutputImages'),
-                                ('WriteColorKeyImages', 'WRITE_COLOR_KEY_IMAGES', 'leftColumn', 'labelWriteColorKeyImages',
-                                 'checkBoxWriteColorKeyImages')]
+                                ('OutputImages', 'OUTPUT IMAGES', 'leftColumn'),
+                                ('WriteColorKeyImages', 'WRITE COLOR KEY IMAGES',
+                                'leftColumn', 'checkBoxColorKeyImages'),
+                                ('Animation', 'ANIMATION', 'leftColumn', 'checkBoxAnimation'),
+                                ('ViewGrowthTypes', 'VIEW GROWTH TYPES (YES/NO)',
+                                'leftColumn', 'checkBoxViewGrowthTypes'),
+                                ('DeltatronPrintWindow', 'DELTATRON_PRINT_WINDOW', 'rightColumn'),
+                                ('Save', 'Save: ', 'bottomBottomRow', 'buttonSave'),
+                                ('Exit', 'Exit: ', 'bottomBottomRow', 'buttonExit'),
+                                ]
 
 labels_qt_align_center = ['labelInputOutputDirectoryMain',
                           'labelPredictionRange',
