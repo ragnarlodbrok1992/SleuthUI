@@ -52,12 +52,15 @@ class Window(object):
         self.buttons['buttonBackgroundDataImage'].clicked.connect(lambda: self.select_files('lineEditBackgroundDataImage'))
 
         # Buttons new window functions
-        self.buttons['buttonOutputFilesColorSettings'].clicked.connect(lambda:
-                                                                       self.buttonOutputFilesColorSettingsClicked())
-        self.buttons['buttonDeltatronAgingColortable'].clicked.connect(lambda:
-                                                                       self.buttonDeltatronAgingColortableClicked())
-        self.buttons['buttonProbabilityColorSettings'].clicked.connect(lambda:
-                                                                       self.buttonProbabilityColorSettingsClicked())
+        self.buttons['buttonOutputFilesColorSettings']\
+            .clicked\
+            .connect(lambda: self.button_new_window_clicked('OutputFilesColorSettings'))
+        self.buttons['buttonDeltatronAgingColortable']\
+            .clicked\
+            .connect(lambda: self.button_new_window_clicked('ProbabilityColorSettings'))
+        self.buttons['buttonProbabilityColorSettings']\
+            .clicked\
+            .connect(lambda: self.button_new_window_clicked('ProbabilityColorSettings'))
 
     def _populate_window(self):
 
@@ -188,15 +191,10 @@ class Window(object):
         files_text = self.fileDialog.getOpenFileNames()
         self.line_edits[line_edit_name].setText(files_text.join(' '))
 
-    def selectfileurban(self):
-        files_text = self.fileDialog.getOpenFileNames()
-        self.line_edits['lineEditUrbanImage'].setText(files_text.join(' '))
-
-    def buttonOutputFilesColorSettingsClicked(self):
-        Window.WindowOutputFilesColorSettings.w.show()
-
-    def buttonDeltatronAgingColortableClicked(self):
-        Window.WindowDeltatronAgingColortable.w.show()
-
-    def buttonProbabilityColorSettingsClicked(self):
-        Window.WindowProbabilityColortableForUrbanGrowth.w.show()
+    def button_new_window_clicked(self, window_name):
+        if window_name == 'OutputFilesColorSettings':
+            Window.WindowOutputFilesColorSettings.w.show()
+        elif window_name == 'DeltatronAgingColortable':
+            Window.WindowDeltatronAgingColortable.w.show()
+        elif window_name == 'ProbabilityColorSettings':
+            Window.WindowProbabilityColortableForUrbanGrowth.w.show()
