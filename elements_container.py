@@ -187,7 +187,10 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow', 'lin
                                  'buttonOutputFilesColorSettings', 'buttonProbabilityColorSettings',
                                  'buttonDeltatronAgingColortable'),
                                 ('ViewDeltatronAging', 'VIEW_DELTATRON_AGING', 'rightColumn',
-                                 'checkBoxViewDeltatronAging')]
+                                 'checkBoxViewDeltatronAging'),
+                                ('OutputImages', 'OUTPUT IMAGES', 'leftColumn', 'labelOutputImages'),
+                                ('WriteColorKeyImages', 'WRITE_COLOR_KEY_IMAGES', 'leftColumn', 'labelWriteColorKeyImages',
+                                 'checkBoxWriteColorKeyImages')]
 
 labels_qt_align_center = ['labelInputOutputDirectoryMain',
                           'labelPredictionRange',

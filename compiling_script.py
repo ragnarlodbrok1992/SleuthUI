@@ -6,6 +6,7 @@ def parse_args():
 
 
 def main():
+    print("Compiling script")
     pass
 
 
