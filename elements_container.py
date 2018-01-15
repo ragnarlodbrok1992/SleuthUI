@@ -210,8 +210,8 @@ line_edits_name_prefix = 'lineEdit'
 # Variable name, label of lineEdit, width, length, bound layout
 line_edits_name_postfix_and_text_width_maxlength = [('SleuthModelName', 'Nazwa modelu', None, None),
                                                     ('Simulation', 'Nazwa scenariusza', None, None),
-                                                    ('ModelDate', '1.1.1970', 70, 10),
-                                                    ('SimulationDate', '1.1.1970', 70, 10),
+                                                    ('ModelDate', '1970', 70, 10),
+                                                    ('SimulationDate', '1970', 70, 10),
                                                     ('DataDirectory', '', None, None),
                                                     ('OutputDirectory', '', None, None),
                                                     ('StartDate', '', None, None),
