@@ -106,6 +106,7 @@ class Window(object):
             self.labels[name].setAlignment(QtCore.Qt.AlignCenter)
 
         # Setting lineEdits
+        x = 0
         self.line_edits = dict()
         LINE_EDIT_NAME = 0
         line_edits_names = [''.join([elements_container.line_edits_name_prefix,
