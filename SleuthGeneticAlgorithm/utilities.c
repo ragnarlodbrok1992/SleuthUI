@@ -791,7 +791,7 @@ void
 **
 */
 void
-  util_WriteZProbGrid (GRID_P z_ptr, char name[])
+  util_WriteZProbGrid (GRID_P z_ptr, char name[]) //TODO: debug function
 {
   char func[] = "util_WriteZProbGrid";
   char filename[MAX_FILENAME_LEN];
@@ -805,12 +805,15 @@ void
   GRID_P overlay_ptr;
   int i;
 
+  printf("\n    [DEBUG]************************************");
+  //char name[] = "_urban_";
+
   overlay_ptr = mem_GetWGridPtr (__FILE__, func, __LINE__);
   assert (overlay_ptr != NULL);
   z_prob_ptr = mem_GetWGridPtr (__FILE__, func, __LINE__);
   assert (z_prob_ptr != NULL);
 
-
+  printf("\n    [DEBUG]************************************");
   /*
    * COPY BACKGROUND INTO Z_PROB_PTR AND REMAP BACKGROUND PIXELS
    * WHICH COLLIDE WITH THE SEED, PROBABILITY COLORS, AND THE
@@ -921,18 +924,38 @@ void
    * WRITE OUT PROBABILITY IMAGE
    *
    */
-  sprintf (filename, "%s%s%s%u.gif",
+
+  printf("\n    [DEBUG DEBUG DEBUG DEBUG]");
+  printf("\n    scen_GetOutputDir() = %s", scen_GetOutputDir());
+  printf("\n    igrid_GetLocation() = %s", igrid_GetLocation());
+  //name = "tymczasowa_nazwa";
+  printf("\n    name = %s", name);
+  printf("\n    proc_GetCurrentYear() = %s", proc_GetCurrentYear());
+  printf("\n    [DEBUG DEBUG DEBUG DEBUG]");
+
+
+  sprintf (filename, "%s%s%s%u.gif", //TODO: debug here, changing filename does not work
            scen_GetOutputDir (),
            igrid_GetLocation (),
            name,
            proc_GetCurrentYear ());
   sprintf (date_str, "%u", proc_GetCurrentYear ());
   printf("\ngdif_WriteGIF gif_filename = %s %s", filename, "930 utilities.c"); //TODO: Find bug here
+
+  printf("\n    [DEBUG DEBUG DEBUG DEBUG]");
+  printf("\n    z_prob_ptr = %s", z_prob_ptr);
+  printf("\n    color_GetColortable = %s", color_GetColortable(PROBABILITY_COLORTABLE));
+  printf("\n    filename = %s", filename);
+  printf("\n    ");
+  printf("\n    ");
+  printf("\n    [DEBUG DEBUG DEBUG DEBUG]");
+
   gdif_WriteGIF (z_prob_ptr,
                  color_GetColortable (PROBABILITY_COLORTABLE),
                  filename,
                  date_str,
                  DATE_COLOR_INDEX);
+  printf("\n    [DEBUG]*****************************");
 
   z_prob_ptr = mem_GetWGridFree (__FILE__, func, __LINE__, z_prob_ptr);
 

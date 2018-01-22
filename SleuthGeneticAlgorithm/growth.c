@@ -600,10 +600,11 @@ static void
       //printf("\n    [DEBUG] cumulate_monte_carlo = %s", cumulate_monte_carlo);
       //printf("\n    [DEBUG] gif_filename = %s", gif_filename);
       //printf("\n    [DEBUG] num_monte_carlo = %s", num_monte_carlo);
-      printf("\n    [DEBUG] proc_GetCurrentMonteCarlo() = %s", proc_GetCurrentMonteCarlo()); //TODO: Bug is somewhere in proc_GetCurrentMonteCarlo();
+      printf("\n    [DEBUG] proc_GetCurrentMonteCarlo() = %d", proc_GetCurrentMonteCarlo()); //TODO: Bug is somewhere in proc_GetCurrentMonteCarlo();
       printf("\n    [DEBUG OUTPUT]");
 
-      util_WriteZProbGrid (cumulate_monte_carlo, name);
+      //name = "Dupa"; //TODO: DEBUG
+      util_WriteZProbGrid (cumulate_monte_carlo, name); //TODO: debug passing name variable
       if (proc_GetCurrentMonteCarlo () != 0)
       {
         printf("    [DEBUG] command = %s", command);
