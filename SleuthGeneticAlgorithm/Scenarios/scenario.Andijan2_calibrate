@@ -218,9 +218,9 @@ PREDICTION_STOP_DATE=2030
 #  format:  <location>.urban.<date>.[<user info>].gif 
 # 
 # 
-URBAN_DATA= Andijan2.urban.1973.gif 
+#URBAN_DATA= Andijan2.urban.1973.gif 
 URBAN_DATA= Andijan2.urban.1978.gif 
-URBAN_DATA= Andijan2.urban.1991.gif
+#URBAN_DATA= Andijan2.urban.1991.gif
 URBAN_DATA= Andijan2.urban.2013.gif 
 # 
 # Road data GIFs 

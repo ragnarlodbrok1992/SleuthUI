@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sleuth3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Sleuth3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Sleuth3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="GD/Makefile" />
+		<Unit filename="GD/README" />
+		<Unit filename="GD/demoin.gif" />
+		<Unit filename="GD/demoout.gif" />
+		<Unit filename="GD/gd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gd.h" />
+		<Unit filename="GD/gddemo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfontg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfontg.h" />
+		<Unit filename="GD/gdfontl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfontl.h" />
+		<Unit filename="GD/gdfontmb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfontmb.h" />
+		<Unit filename="GD/gdfonts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfonts.h" />
+		<Unit filename="GD/gdfontt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/gdfontt.h" />
+		<Unit filename="GD/giftogd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/index.html" />
+		<Unit filename="GD/libgd.a.sgi" />
+		<Unit filename="GD/mathmake.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/mtables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/webgif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GD/write_gif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Makefile" />
+		<Unit filename="Makefile.inc" />
+		<Unit filename="SLEUTH3.0beta_p01_linux_readme.txt" />
+		<Unit filename="Sleuth3.cbp" />
+		<Unit filename="Whirlgif/CHANGES" />
+		<Unit filename="Whirlgif/Makefile" />
+		<Unit filename="Whirlgif/README" />
+		<Unit filename="Whirlgif/animation.gif" />
+		<Unit filename="Whirlgif/gifdecod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Whirlgif/gifencod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Whirlgif/whirlgif.1" />
+		<Unit filename="Whirlgif/whirlgif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Whirlgif/whirlgif.h" />
+		<Unit filename="Whirlgif/whirlgif.man" />
+		<Unit filename="coeff_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="coeff_obj.h" />
+		<Unit filename="color_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="color_obj.h" />
+		<Unit filename="deltatron.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="deltatron.h" />
+		<Unit filename="driver.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="driver.h" />
+		<Unit filename="gdif_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gdif_obj.h" />
+		<Unit filename="globals.h" />
+		<Unit filename="grid_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grid_obj.h" />
+		<Unit filename="growth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="growth.h" />
+		<Unit filename="igrid_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="igrid_obj.h" />
+		<Unit filename="input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="input.h" />
+		<Unit filename="landclass_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="landclass_obj.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memory_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memory_obj.h" />
+		<Unit filename="output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="output.h" />
+		<Unit filename="pgrid_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pgrid_obj.h" />
+		<Unit filename="proc_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="proc_obj.h" />
+		<Unit filename="random.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="random.h" />
+		<Unit filename="scenario_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="scenario_obj.h" />
+		<Unit filename="sources.html" />
+		<Unit filename="spread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="spread.h" />
+		<Unit filename="stats_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stats_obj.h" />
+		<Unit filename="timer_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="timer_obj.h" />
+		<Unit filename="transition_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="transition_obj.h" />
+		<Unit filename="ugm_defines.h" />
+		<Unit filename="ugm_macros.h" />
+		<Unit filename="ugm_typedefs.h" />
+		<Unit filename="utilities.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utilities.h" />
+		<Unit filename="wgrid_obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wgrid_obj.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

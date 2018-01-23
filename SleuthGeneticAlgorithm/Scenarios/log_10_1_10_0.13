@@ -1,0 +1,252 @@
+Sub Population:    0
+ Gene:     0 Params: 20 20 20 20 20 Fitness: 0.064830
+Sub Population:    1
+ Gene:     1 Params: 76 7 91 91 64 Fitness: 0.052692
+Sub Population:    2
+ Gene:     2 Params: 0 0 0 0 0 Fitness: 0.023798
+Sub Population:    3
+ Gene:     3 Params: 79 68 95 10 63 Fitness: 0.016773
+Sub Population:    4
+ Gene:     4 Params: 19 34 32 3 33 Fitness: 0.004835
+Sub Population:    5
+ Gene:     5 Params: 40 40 40 40 40 Fitness: 0.001326
+Sub Population:    6
+ Gene:     6 Params: 13 54 46 37 84 Fitness: 0.001208
+Sub Population:    7
+ Gene:     7 Params: 86 48 92 83 49 Fitness: 0.000053
+Sub Population:    8
+ Gene:     8 Params: 60 60 60 60 60 Fitness: 0.000015
+Sub Population:    9
+ Gene:     9 Params: 80 80 80 80 80 Fitness: 0.000000
+****************GENERATION 1 *****************
+Sub Population:    0
+ Gene:     0 Params: 88 1 0 1 2 Fitness: 0.137472
+Sub Population:    1
+ Gene:     1 Params: 36 20 20 85 63 Fitness: 0.100370
+Sub Population:    2
+ Gene:     2 Params: 6 45 13 13 25 Fitness: 0.086510
+Sub Population:    3
+ Gene:     3 Params: 20 20 20 20 20 Fitness: 0.064830
+Sub Population:    4
+ Gene:     4 Params: 76 7 91 91 64 Fitness: 0.052692
+Sub Population:    5
+ Gene:     5 Params: 76 7 95 10 63 Fitness: 0.050571
+Sub Population:    6
+ Gene:     6 Params: 86 0 47 0 0 Fitness: 0.037552
+Sub Population:    7
+ Gene:     7 Params: 79 68 95 10 63 Fitness: 0.016773
+Sub Population:    8
+ Gene:     8 Params: 79 68 95 2 20 Fitness: 0.016705
+Sub Population:    9
+ Gene:     9 Params: 19 34 32 3 33 Fitness: 0.004835
+****************GENERATION 2 *****************
+Sub Population:    0
+ Gene:     0 Params: 89 1 15 14 25 Fitness: 0.150148
+Sub Population:    1
+ Gene:     1 Params: 86 0 13 13 57 Fitness: 0.146269
+Sub Population:    2
+ Gene:     2 Params: 88 1 0 1 2 Fitness: 0.137472
+Sub Population:    3
+ Gene:     3 Params: 6 45 0 1 97 Fitness: 0.125537
+Sub Population:    4
+ Gene:     4 Params: 36 20 20 85 63 Fitness: 0.100370
+Sub Population:    5
+ Gene:     5 Params: 79 0 47 49 0 Fitness: 0.087414
+Sub Population:    6
+ Gene:     6 Params: 6 45 13 13 25 Fitness: 0.086510
+Sub Population:    7
+ Gene:     7 Params: 63 9 61 69 83 Fitness: 0.012189
+Sub Population:    8
+ Gene:     8 Params: 20 20 74 20 20 Fitness: 0.001672
+Sub Population:    9
+ Gene:     9 Params: 12 1 13 13 25 Fitness: 0.001179
+****************GENERATION 3 *****************
+Sub Population:    0
+ Gene:     0 Params: 86 0 13 13 97 Fitness: 0.152965
+Sub Population:    1
+ Gene:     1 Params: 91 1 13 17 93 Fitness: 0.150720
+Sub Population:    2
+ Gene:     2 Params: 89 1 15 14 25 Fitness: 0.150148
+Sub Population:    3
+ Gene:     3 Params: 86 0 13 13 57 Fitness: 0.146269
+Sub Population:    4
+ Gene:     4 Params: 79 1 10 14 25 Fitness: 0.141620
+Sub Population:    5
+ Gene:     5 Params: 12 20 20 85 0 Fitness: 0.099273
+Sub Population:    6
+ Gene:     6 Params: 6 45 0 15 97 Fitness: 0.094383
+Sub Population:    7
+ Gene:     7 Params: 39 0 63 13 97 Fitness: 0.062204
+Sub Population:    8
+ Gene:     8 Params: 23 45 0 13 25 Fitness: 0.049388
+Sub Population:    9
+ Gene:     9 Params: 80 0 47 17 96 Fitness: 0.032135
+****************GENERATION 4 *****************
+Sub Population:    0
+ Gene:     0 Params: 89 1 13 13 37 Fitness: 0.155666
+Sub Population:    1
+ Gene:     1 Params: 89 1 15 14 58 Fitness: 0.154508
+Sub Population:    2
+ Gene:     2 Params: 86 0 13 13 97 Fitness: 0.152965
+Sub Population:    3
+ Gene:     3 Params: 89 1 15 14 93 Fitness: 0.152482
+Sub Population:    4
+ Gene:     4 Params: 91 1 13 17 93 Fitness: 0.150720
+Sub Population:    5
+ Gene:     5 Params: 95 1 14 17 49 Fitness: 0.148392
+Sub Population:    6
+ Gene:     6 Params: 23 0 13 13 28 Fitness: 0.147061
+Sub Population:    7
+ Gene:     7 Params: 86 0 13 13 25 Fitness: 0.146536
+Sub Population:    8
+ Gene:     8 Params: 86 0 13 13 19 Fitness: 0.146361
+Sub Population:    9
+ Gene:     9 Params: 58 83 55 4 71 Fitness: 0.013685
+****************GENERATION 5 *****************
+Sub Population:    0
+ Gene:     0 Params: 89 1 13 25 93 Fitness: 0.165293
+Sub Population:    1
+ Gene:     1 Params: 68 1 13 25 93 Fitness: 0.162649
+Sub Population:    2
+ Gene:     2 Params: 89 1 13 13 37 Fitness: 0.155666
+Sub Population:    3
+ Gene:     3 Params: 86 1 15 14 58 Fitness: 0.154913
+Sub Population:    4
+ Gene:     4 Params: 89 1 15 14 58 Fitness: 0.154508
+Sub Population:    5
+ Gene:     5 Params: 89 1 13 13 28 Fitness: 0.153821
+Sub Population:    6
+ Gene:     6 Params: 89 1 15 14 93 Fitness: 0.152482
+Sub Population:    7
+ Gene:     7 Params: 89 0 13 13 97 Fitness: 0.150594
+Sub Population:    8
+ Gene:     8 Params: 95 5 13 25 96 Fitness: 0.080630
+Sub Population:    9
+ Gene:     9 Params: 86 0 13 48 97 Fitness: 0.059342
+****************GENERATION 6 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    1
+ Gene:     1 Params: 89 1 13 25 93 Fitness: 0.165293
+Sub Population:    2
+ Gene:     2 Params: 68 1 13 25 93 Fitness: 0.162649
+Sub Population:    3
+ Gene:     3 Params: 86 1 13 25 93 Fitness: 0.158671
+Sub Population:    4
+ Gene:     4 Params: 68 1 13 25 42 Fitness: 0.157915
+Sub Population:    5
+ Gene:     5 Params: 86 1 15 14 58 Fitness: 0.154913
+Sub Population:    6
+ Gene:     6 Params: 89 1 13 11 37 Fitness: 0.154848
+Sub Population:    7
+ Gene:     7 Params: 89 0 13 13 46 Fitness: 0.152983
+Sub Population:    8
+ Gene:     8 Params: 9 33 71 70 12 Fitness: 0.092082
+Sub Population:    9
+ Gene:     9 Params: 5 82 41 15 67 Fitness: 0.006629
+****************GENERATION 7 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    1
+ Gene:     1 Params: 89 1 13 25 93 Fitness: 0.165293
+Sub Population:    2
+ Gene:     2 Params: 78 1 17 26 95 Fitness: 0.163219
+Sub Population:    3
+ Gene:     3 Params: 68 1 13 25 93 Fitness: 0.162649
+Sub Population:    4
+ Gene:     4 Params: 68 3 13 25 93 Fitness: 0.159933
+Sub Population:    5
+ Gene:     5 Params: 87 1 13 25 42 Fitness: 0.157650
+Sub Population:    6
+ Gene:     6 Params: 83 1 17 18 37 Fitness: 0.149655
+Sub Population:    7
+ Gene:     7 Params: 66 8 37 59 97 Fitness: 0.014243
+Sub Population:    8
+ Gene:     8 Params: 22 89 22 15 71 Fitness: 0.011768
+Sub Population:    9
+ Gene:     9 Params: 40 28 51 60 18 Fitness: 0.003810
+****************GENERATION 8 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 96 Fitness: 0.169724
+Sub Population:    1
+ Gene:     1 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    2
+ Gene:     2 Params: 89 1 13 25 93 Fitness: 0.165293
+Sub Population:    3
+ Gene:     3 Params: 78 1 17 26 21 Fitness: 0.161182
+Sub Population:    4
+ Gene:     4 Params: 68 1 13 25 15 Fitness: 0.158841
+Sub Population:    5
+ Gene:     5 Params: 87 1 13 25 93 Fitness: 0.152419
+Sub Population:    6
+ Gene:     6 Params: 72 1 17 29 96 Fitness: 0.151609
+Sub Population:    7
+ Gene:     7 Params: 83 1 17 18 37 Fitness: 0.149655
+Sub Population:    8
+ Gene:     8 Params: 89 1 13 69 22 Fitness: 0.078025
+Sub Population:    9
+ Gene:     9 Params: 87 7 23 28 94 Fitness: 0.007555
+****************GENERATION 9 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 96 Fitness: 0.169724
+Sub Population:    1
+ Gene:     1 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    2
+ Gene:     2 Params: 89 1 13 25 93 Fitness: 0.165293
+Sub Population:    3
+ Gene:     3 Params: 91 1 17 27 98 Fitness: 0.164054
+Sub Population:    4
+ Gene:     4 Params: 78 1 17 26 21 Fitness: 0.161182
+Sub Population:    5
+ Gene:     5 Params: 83 1 10 25 93 Fitness: 0.158352
+Sub Population:    6
+ Gene:     6 Params: 89 1 13 93 15 Fitness: 0.085099
+Sub Population:    7
+ Gene:     7 Params: 68 1 17 89 96 Fitness: 0.080179
+Sub Population:    8
+ Gene:     8 Params: 43 34 40 1 17 Fitness: 0.009068
+Sub Population:    9
+ Gene:     9 Params: 56 87 33 30 38 Fitness: 0.000465
+****************GENERATION 10 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 96 Fitness: 0.169724
+Sub Population:    1
+ Gene:     1 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    2
+ Gene:     2 Params: 91 1 10 25 26 Fitness: 0.162893
+Sub Population:    3
+ Gene:     3 Params: 87 5 15 30 93 Fitness: 0.161324
+Sub Population:    4
+ Gene:     4 Params: 83 1 10 29 96 Fitness: 0.161078
+Sub Population:    5
+ Gene:     5 Params: 81 1 13 25 53 Fitness: 0.159749
+Sub Population:    6
+ Gene:     6 Params: 91 1 17 27 19 Fitness: 0.154944
+Sub Population:    7
+ Gene:     7 Params: 67 1 17 27 98 Fitness: 0.152637
+Sub Population:    8
+ Gene:     8 Params: 83 1 13 99 93 Fitness: 0.089086
+Sub Population:    9
+ Gene:     9 Params: 64 20 70 14 0 Fitness: 0.010378
+****************GENERATION 11 *****************
+Sub Population:    0
+ Gene:     0 Params: 83 1 17 29 96 Fitness: 0.169724
+Sub Population:    1
+ Gene:     1 Params: 83 1 17 29 90 Fitness: 0.166440
+Sub Population:    2
+ Gene:     2 Params: 91 1 10 25 30 Fitness: 0.163651
+Sub Population:    3
+ Gene:     3 Params: 83 1 15 29 12 Fitness: 0.162929
+Sub Population:    4
+ Gene:     4 Params: 68 1 10 29 25 Fitness: 0.157777
+Sub Population:    5
+ Gene:     5 Params: 78 9 12 32 94 Fitness: 0.107825
+Sub Population:    6
+ Gene:     6 Params: 87 5 15 22 93 Fitness: 0.065704
+Sub Population:    7
+ Gene:     7 Params: 83 1 10 40 96 Fitness: 0.035513
+Sub Population:    8
+ Gene:     8 Params: 83 1 51 29 93 Fitness: 0.018211
+Sub Population:    9
+ Gene:     9 Params: 0 88 89 30 83 Fitness: 0.003818
+****************GENERATION 12 *****************

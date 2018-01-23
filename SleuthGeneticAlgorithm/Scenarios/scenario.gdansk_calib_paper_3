@@ -38,7 +38,7 @@ WHIRLGIF_BINARY=../Whirlgif/whirlgif
 # II. RUNNING STATUS (ECHO) 
 #  Status of model run, monte carlo iteration, and year will be 
 #  printed to the screen during model execution. 
-ECHO(YES/NO)=yes 
+ECHO(YES/NO)=no
 
 # III. Output Files 
 # INDICATE TYPES OF ASCII DATA FILES TO BE WRITTEN TO OUTPUT_DIRECTORY. 
@@ -56,8 +56,8 @@ ECHO(YES/NO)=yes
 #            described below. 
 WRITE_COEFF_FILE(YES/NO)=yes
 WRITE_AVG_FILE(YES/NO)=yes
-WRITE_STD_DEV_FILE(YES/NO)=yes 
-WRITE_MEMORY_MAP(YES/NO)=YES
+WRITE_STD_DEV_FILE(YES/NO)=no
+WRITE_MEMORY_MAP(YES/NO)=no
 LOGGING(YES/NO)=YES
 
 # IV. Log File Preferences 
@@ -82,17 +82,17 @@ LOGGING(YES/NO)=YES
 #     each module. If running in parallel, LOG_0 will contain timing for 
 #     complete job. 
 LOG_LANDCLASS_SUMMARY(YES/NO)=yes 
-LOG_SLOPE_WEIGHTS(YES/NO)=yes 
-LOG_READS(YES/NO)=yes
-LOG_WRITES(YES/NO)=yes
-LOG_COLORTABLES(YES/NO)=yes
-LOG_PROCESSING_STATUS(0:off/1:low verbosity/2:high verbosity)=2 
+LOG_SLOPE_WEIGHTS(YES/NO)=no 
+LOG_READS(YES/NO)=no
+LOG_WRITES(YES/NO)=no
+LOG_COLORTABLES(YES/NO)=no
+LOG_PROCESSING_STATUS(0:off/1:low verbosity/2:high verbosity)=1 
 LOG_TRANSITION_MATRIX(YES/NO)=yes
-LOG_URBANIZATION_ATTEMPTS(YES/NO)=yes
-LOG_INITIAL_COEFFICIENTS(YES/NO)=yes
+LOG_URBANIZATION_ATTEMPTS(YES/NO)=no
+LOG_INITIAL_COEFFICIENTS(YES/NO)=no
 LOG_BASE_STATISTICS(YES/NO)=yes 
-LOG_DEBUG(YES/NO)= yes
-LOG_TIMINGS(0:off/1:low verbosity/2:high verbosity)=2
+LOG_DEBUG(YES/NO)= no
+LOG_TIMINGS(0:off/1:low verbosity/2:high verbosity)=1
 
 # V. WORKING GRIDS 
 # The number of working grids needed from memory during model execution is
@@ -107,7 +107,7 @@ NUM_WORKING_GRIDS=8
 # VI. RANDOM NUMBER SEED 
 # This number initializes the random number generator. This seed will be
 # used to initialize each model run. 
-RANDOM_SEED=1
+RANDOM_SEED=20161117
 
 # VII. MONTE CARLO ITERATIONS 
 # Each model run may be completed in a monte carlo fashion. 
@@ -120,7 +120,7 @@ RANDOM_SEED=1
 #  control_stats.log file. The input per run may be associated across 
 #  files using the 'index' number in the files' first column. 
 # 
-MONTE_CARLO_ITERATIONS=10
+MONTE_CARLO_ITERATIONS=4
 
 # VIII. COEFFICIENTS 
 # The coefficients effect how the growth rules are applied to the data.
@@ -166,23 +166,23 @@ MONTE_CARLO_ITERATIONS=10
 
 CALIBRATION_DIFFUSION_START= 1
 CALIBRATION_DIFFUSION_STEP=  1
-CALIBRATION_DIFFUSION_STOP=  6
+CALIBRATION_DIFFUSION_STOP=  1
 
 CALIBRATION_BREED_START=     3
 CALIBRATION_BREED_STEP=      1
-CALIBRATION_BREED_STOP=      8
+CALIBRATION_BREED_STOP=      3
 
-CALIBRATION_SPREAD_START=    28
+CALIBRATION_SPREAD_START=    70
 CALIBRATION_SPREAD_STEP=     1
-CALIBRATION_SPREAD_STOP=     33
+CALIBRATION_SPREAD_STOP=     70
 
-CALIBRATION_SLOPE_START=     23
+CALIBRATION_SLOPE_START=     41
 CALIBRATION_SLOPE_STEP=      1
-CALIBRATION_SLOPE_STOP=      28 
+CALIBRATION_SLOPE_STOP=      41 
 
-CALIBRATION_ROAD_START=      1
+CALIBRATION_ROAD_START=      15
 CALIBRATION_ROAD_STEP=       1
-CALIBRATION_ROAD_STOP=       6
+CALIBRATION_ROAD_STOP=       15
 
 PREDICTION_DIFFUSION_BEST_FIT=  1 
 PREDICTION_BREED_BEST_FIT=  4 
@@ -264,9 +264,9 @@ BACKGROUND_DATA= gdansk.hillshade.gif
 #   ANIMATION: if whirlgif has been compiled, and the WHIRLGIF_BINARY 
 #              path has been defined, animated gifs begining with the 
 #              file name 'animated' will be created in PREDICT mode. 
-WRITE_COLOR_KEY_IMAGES(YES/NO)=yes
-ECHO_IMAGE_FILES(YES/NO)=yes
-ANIMATION(YES/NO)= yes
+WRITE_COLOR_KEY_IMAGES(YES/NO)=no
+ECHO_IMAGE_FILES(YES/NO)=no
+ANIMATION(YES/NO)= no
 
 # XII. COLORTABLE SETTINGS 
 #  A. DATE COLOR SETTING 
