@@ -238,6 +238,7 @@ LANDUSE_DATA_COMMENT = "#\
 # Landuse data GIFs\
 #  format:  <location>.landuse.<date>.[<user info>].gif\
 #"
+LANDUSE_DATA = ""
 
 EXCLUDED_DATA_COMMENT = "#\
 # Excluded data GIF\
