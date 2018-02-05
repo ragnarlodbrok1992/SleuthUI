@@ -4,6 +4,8 @@ import window_output_files_color_settings
 import window_deltatron_aging_colortable
 import window_probability_colortable_for_urban_growth
 import elements_container
+from configuration.scenario_file_creator import ScenarioCreator
+import os
 from pprint import pprint
 
 __author__ = 'Maciej Oliwa'
@@ -21,6 +23,8 @@ class Window(object):
     def __init__(self):
         # Interface initialisation
 
+        self.scenario_creator = ScenarioCreator()
+
         w = QtGui.QWidget()
         w.resize(1024, 798)
         w.move(0, 0)
@@ -30,6 +34,7 @@ class Window(object):
         self._populate_window()
         self._set_layouts()
         self._set_button_functions()
+        self._populate_default_values()
 
         w.setLayout(self.mainLayout)
         w.show()
@@ -39,6 +44,17 @@ class Window(object):
         self.fileDialog = QtGui.QFileDialog
 
         sys.exit(self.app.exec_())
+
+    def _populate_default_values(self):
+        
+
+        pass
+
+    def _run_simulation(self, path_to_scenario_dir):
+        self.scenario_creator.save_to_file(path_to_scenario_dir)
+
+        # Debug:
+        # print "DEBUG!: " + str(path_to_scenario_dir)
 
     def _set_button_functions(self):
         # Buttons bottom for control
@@ -50,6 +66,9 @@ class Window(object):
         self.buttons['buttonExcludedDataImage'].clicked.connect(lambda: self.select_files('lineEditExcludedDataImage'))
         self.buttons['buttonSlopeDataImage'].clicked.connect(lambda: self.select_files('lineEditSlopeDataImage'))
         self.buttons['buttonBackgroundDataImage'].clicked.connect(lambda: self.select_files('lineEditBackgroundDataImage'))
+
+        # Run simulation button
+        self.buttons['buttonRun'].clicked.connect(lambda: self._run_simulation(str(os.path.dirname(__file__) + "\\Sleuth3\\Scenarios\\scenario.debug_calibrate")))
 
         # Buttons new window functions
         self.buttons['buttonOutputFilesColorSettings']\
@@ -199,3 +218,7 @@ class Window(object):
             Window.WindowDeltatronAgingColortable.w.show()
         elif window_name == 'ProbabilityColorSettings':
             Window.WindowProbabilityColortableForUrbanGrowth.w.show()
+
+
+if __name__ == "__main__":
+    pass

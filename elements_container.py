@@ -61,7 +61,7 @@ buttons_name_postfix_and_text = [('UrbanDataImage', 'Wybierz z dysku'),
                                   'Color settings for deltatron aging',
                                   'labelColorsSettingsButtons',
                                   ''),
-                                 ('Save', 'Save'),
+                                 ('Run', 'Run'),
                                  ('Exit', 'Exit')]
 
 # Setting labels
@@ -193,7 +193,7 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow', 'lin
                                 ('ViewGrowthTypes', 'VIEW GROWTH TYPES (YES/NO)',
                                 'leftColumn', 'checkBoxViewGrowthTypes'),
                                 ('DeltatronPrintWindow', 'DELTATRON_PRINT_WINDOW', 'rightColumn'),
-                                ('Save', 'Save: ', 'bottomBottomRow', 'buttonSave'),
+                                ('Run', 'Run: ', 'bottomBottomRow', 'buttonRun'),
                                 ('Exit', 'Exit: ', 'bottomBottomRow', 'buttonExit'),
                                 ]
 

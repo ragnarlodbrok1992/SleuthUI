@@ -322,17 +322,17 @@ PROBABILITY_COLORTABLE_COMMENT = "#     3. PROBABILITY COLORTABLE FOR URBAN GROW
 #            low/upper: indicate the boundaries of the range.\n\
 #\n\
 #                  low,  upper,   hex,  (Optional Name)\n"
-PROBABILITY_COLOR = [0,    1,  None    ,  # transparent
-                     1,    10, 0X00ff33,  # green
-                     10,   20, 0X00cc33,  #
-                     20,   30, 0X009933,  #
-                     30,   40, 0X006666,  # blue
-                     40,   50, 0X003366,  #
-                     50,   60, 0X000066,  #
-                     60,   70, 0XFF6A6A,  # lt orange
-                     70,   80, 0Xff7F00,  # dark orange
-                     80,   90, 0Xff3E96,  # violetred
-                     90,  100, 0Xff0033]  # dark red
+PROBABILITY_COLOR = [0,    1,  "0X000000",  # transparent
+                     1,    10, "0X00ff33",  # green
+                     10,   20, "0X00cc33",  #
+                     20,   30, "0X009933",  #
+                     30,   40, "0X006666",  # blue
+                     40,   50, "0X003366",  #
+                     50,   60, "0X000066",  #
+                     60,   70, "0XFF6A6A",  # lt orange
+                     70,   80, "0Xff7F00",  # dark orange
+                     80,   90, "0Xff3E96",  # violetred
+                     90,  100, "0Xff0033"]  # dark red
 
 LAND_COVER_COLORTABLE_COMMENT = "#  C. LAND COVER COLORTABLE\n\
 #  Land cover input images should be in grayscale GIF image format.\n\
@@ -350,14 +350,14 @@ LAND_COVER_COLORTABLE_COMMENT = "#  C. LAND COVER COLORTABLE\n\
 #    hex/rgb: hexidecimal or rgb (red, green, blue) output colors\n\
 #\n\
 #              pix, name,     flag,   hex/rgb, #comment\n"
-LANDUSE_CLASS = [0,  "Unclass", "UNC", 0X000000,
-                 1,  "Urban", "URB", 0X8b2323,  # dark red
-                 2,  "Agric", None, 0Xffec8b,  # pale yellow
-                 3,  "Range", None, 0Xee9a49,  # tan
-                 4,  "Forest", None, 0X006400,
-                 5,  "Water", "EXC", 0X104e8b,
-                 6,  "Wetland", None, 0X483d8b,
-                 7,  "Barren", None, 0Xeec591]
+LANDUSE_CLASS = [0,  "Unclass", "UNC", "0X000000",
+                 1,  "Urban", "URB", "0X8b2323",  # dark red
+                 2,  "Agric", "", "0Xffec8b",  # pale yellow
+                 3,  "Range", "", "0Xee9a49",  # tan
+                 4,  "Forest", "", "0X006400",
+                 5,  "Water", "EXC", "0X104e8b",
+                 6,  "Wetland", "", "0X483d8b",
+                 7,  "Barren", "", "0Xeec591"]
 
 GROWTH_TYPE_OUTPUT_COMMENT = "#  D. GROWTH TYPE IMAGE OUTPUT CONTROL AND COLORTABLE\n\
 #\n\
@@ -383,12 +383,12 @@ GROWTH_TYPE_OUTPUT_COMMENT = "#  D. GROWTH TYPE IMAGE OUTPUT CONTROL AND COLORTA
 #  0 == first\n"
 VIEW_GROWTH_TYPES = "YES"
 GROWTH_TYPE_PRINT_WINDOW = 0, 0, 0, 0, 1995, 2020
-PHASE0G_GROWTH_COLOR = 0xff0000  # seed urban area
-PHASE1G_GROWTH_COLOR = 0X00ff00  # diffusion growth
-PHASE2G_GROWTH_COLOR = 0X0000ff  # NOT USED
-PHASE3G_GROWTH_COLOR = 0Xffff00  # breed growth
-PHASE4G_GROWTH_COLOR = 0Xffffff  # spread growth
-PHASE5G_GROWTH_COLOR = 0X00ffff  # road influenced growth
+PHASE0G_GROWTH_COLOR = "0xff0000"  # seed urban area
+PHASE1G_GROWTH_COLOR = "0X00ff00"  # diffusion growth
+PHASE2G_GROWTH_COLOR = "0X0000ff"  # NOT USED
+PHASE3G_GROWTH_COLOR = "0Xffff00"  # breed growth
+PHASE4G_GROWTH_COLOR = "0Xffffff"  # spread growth
+PHASE5G_GROWTH_COLOR = "0X00ffff"  # road influenced growth
 
 DELTATRON_AGING_SECTION = "#************************************************************\n\
 #\n\
@@ -411,15 +411,15 @@ DELTATRON_AGING_SECTION = "#****************************************************
 #  mc1 <= current monte carlo <= mc2 AND\n\
 #  year1 <= currrent year <= year2\n\
 #\n\
-#  0 == first"
+#  0 == first\n"
 VIEW_DELTATRON_AGING = "YES"
 DELTATRON_PRINT_WINDOW = 0, 0, 0, 0, 1930, 2020
-DELTATRON_COLOR = [0x000000,  # index 0 No or dead deltatron
-                   0X00FF00,  # index 1 age = 1 year
-                   0X00D200,  # index 2 age = 2 year
-                   0X00AA00,  # index 3 age = 3 year
-                   0X008200,  # index 4 age = 4 year
-                   0X005A00]  # index 5 age = 5 year
+DELTATRON_COLOR = ["0x000000",  # index 0 No or dead deltatron
+                   "0X00FF00",  # index 1 age = 1 year
+                   "0X00D200",  # index 2 age = 2 year
+                   "0X00AA00",  # index 3 age = 3 year
+                   "0X008200",  # index 4 age = 4 year
+                   "0X005A00"]  # index 5 age = 5 year
 
 SELF_MODIFICATION_COMMENT = "# XIII. SELF-MODIFICATION PARAMETERS\n\
 #       SLEUTH is a self-modifying cellular automata. For more\n\

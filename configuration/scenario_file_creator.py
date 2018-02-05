@@ -105,7 +105,7 @@ class ScenarioCreator(object):
         self.water_color = configuration_default.WATER_COLOR
 
         self.probability_colortable_comment = configuration_default.PROBABILITY_COLORTABLE_COMMENT
-        self.probaibility_color = configuration_default.PROBABILITY_COLOR
+        self.probability_color = configuration_default.PROBABILITY_COLOR
 
         self.land_cover_colortable_comment = configuration_default.LAND_COVER_COLORTABLE_COMMENT
         self.landuse_class = configuration_default.LANDUSE_CLASS
@@ -266,6 +266,65 @@ class ScenarioCreator(object):
         file_string += configuration_dict.CONF_VAR_DICT["ECHO_IMAGE_FILES"] + "=" + self.echo_images_files + "\n"
         file_string += configuration_dict.CONF_VAR_DICT["ANIMATION"] + "=" + self.animation + "\n"
 
+        file_string += self.colortable_settings_comment
+        file_string += "DATE_COLOR=" + str(self.date_color) + "\n"
+
+        file_string += self.urban_non_landuse_colortable_settings
+
+        file_string += "SEED_COLOR= " + str(self.seed_color[0]) + ", " + str(self.seed_color[1]) + ", " + str(self.seed_color[2]) + " # pale yellow\n"
+        file_string += self.water_color_comment
+        file_string += "WATER_COLOR= " + str(self.water_color[0]) + ", " + str(self.water_color[1]) + ", " + str(self.water_color[2]) + " # royal blue\n"
+
+        file_string += self.probability_colortable_comment
+
+        # PROBABILITY_COLOR = 0, 1,          ,  # transparent
+        # PROBABILITY_COLOR = 1, 10, 0X00ff33,  # green
+        for x in range(0, 10):
+            file_string += "PROBABILITY_COLOR = " + str(self.probability_color[3 * x]) + " , " + str(self.probability_color[3 * x + 1]) + ", " + str(self.probability_color[3 * x + 2]) + ",\n"
+
+        file_string += self.land_cover_colortable_comment
+
+        for x in range(0, 7):
+            file_string += "LANDUSE_CLASS= " + str(self.landuse_class[4 * x]) + ", " + str(self.landuse_class[4 * x + 1]) + ", " + str(self.landuse_class[4 * x + 2]) + ", " + str(self.landuse_class[4 * x + 3]) + "\n"
+
+        file_string += self.growth_type_output_comment
+
+        file_string += "VIEW_GROWTH_TYPE(YES/NO)=" + str(self.view_growth_types) + "\n"
+        file_string += "GROWTH_TYPE_PRINT_WINDOW=" + str(self.growth_type_print_window[0]) + "," + str(self.growth_type_print_window[1]) + "," + str(self.growth_type_print_window[2]) + "," + str(self.growth_type_print_window[3]) + ","\
+                       + str(self.growth_type_print_window[4]) + "," + str(self.growth_type_print_window[5]) + "\n"
+        file_string += "PHASE0G_GROWTH_COLOR=" + str(self.phase0g_growth_color) + "\n"
+        file_string += "PHASE1G_GROWTH_COLOR=" + str(self.phase1g_growth_color) + "\n"
+        file_string += "PHASE2G_GROWTH_COLOR=" + str(self.phase2g_growth_color) + "\n"
+        file_string += "PHASE3G_GROWTH_COLOR=" + str(self.phase3g_growth_color) + "\n"
+        file_string += "PHASE4G_GROWTH_COLOR=" + str(self.phase4g_growth_color) + "\n"
+        file_string += "PHASE5G_GROWTH_COLOR=" + str(self.phase5g_growth_color) + "\n"
+
+        file_string += self.deltatron_aging_section
+
+        file_string += "VIEW_DELTATRON_AGING(YES/NO)=" + self.view_deltatron_aging + "\n"
+        file_string += "DELTATRON_PRINT_WINDOW=" + str(self.deltatron_print_window[0]) + "," + str(self.deltatron_print_window[1]) + "," + str(self.deltatron_print_window[2]) + "," + str(self.deltatron_print_window[3]) + "," \
+                       + str(self.deltatron_print_window[4]) + "," + str(self.deltatron_print_window[5]) + "\n"
+
+        for x in range(0, 6):
+            file_string += "DELTATRON_COLOR=" + str(self.deltatron_color[x]) + "\n"
+
+        file_string += self.self_modification_comment
+        # ROAD_GRAV_SENSITIVITY = 0.01
+        # SLOPE_SENSITIVITY = 0.1
+        # CRITICAL_LOW = 0.97
+        # CRITICAL_HIGH = 1.3
+        # # CRITICAL_LOW=0.0
+        # # CRITICAL_HIGH=10000000000000.0
+        # CRITICAL_SLOPE = 15.0
+        # BOOM = 1.01
+        # BUST = 0.09
+        file_string += "ROAD_GRAV_SENSITIVITY = " + str(self.road_grav_sensitivity) + "\n"
+        file_string += "SLOPE_SENSITIVITY = " + str(self.slope_sensitivity) + "\n"
+        file_string += "CRITICAL_LOW = " + str(self.critical_low) + "\n"
+        file_string += "CRITICAL_HIGH = " + str(self.critical_high) + "\n"
+        file_string += "CRITICAL_SLOPE = " + str(self.critical_slope) + "\n"
+        file_string += "BOOM = " + str(self.boom) + "\n"
+
         fd = os.open(path, os.O_RDWR|os.O_CREAT)
         ret = os.write(fd, file_string)
         return ret
@@ -274,7 +333,7 @@ class ScenarioCreator(object):
 if __name__ == "__main__":
     scr_creator = ScenarioCreator()
     # scr_creator.print_all()
-    scr_creator.save_to_file(os.getcwd() + "\\" + "debug.txt")
+    scr_creator.save_to_file(os.getcwd() + "\\..\\Sleuth3\\Scenarios\\" + "debug.txt")
     # print(os.getcwd())
     # print(os.getcwd() + "\debug.txt")
     # fd = os.open(os.getcwd() + "\\" + "debug.txt", os.O_RDWR|os.O_CREAT)
