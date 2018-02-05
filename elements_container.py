@@ -38,7 +38,9 @@ radiobuttons_name_postfix = [('ColorKeyImages', ''),
                              ('WriteXYPointsFile', ''),
                              ('ViewDeltatronAging', ''),
                              ('WriteColorKeyImages', ''),
-                             ('Animation', '')]
+                             ('Animation', ''),
+                             ('Calibrate', ''),
+                             ('Predict', '')]
 
 # Setting buttons
 buttons_name_prefix = 'button'
@@ -195,6 +197,8 @@ labels_name_postfix_and_text = [('SleuthModel', 'SLEUTH Model: ', 'topRow', 'lin
                                 ('DeltatronPrintWindow', 'DELTATRON_PRINT_WINDOW', 'rightColumn'),
                                 ('Run', 'Run: ', 'bottomBottomRow', 'buttonRun'),
                                 ('Exit', 'Exit: ', 'bottomBottomRow', 'buttonExit'),
+                                ('Calibrate', 'Calibrate', 'bottomBottomRow', 'checkBoxCalibrate'),
+                                ('Predict', 'Predict', 'bottomBottomRow', 'checkBoxPredict')
                                 ]
 
 labels_qt_align_center = ['labelInputOutputDirectoryMain',
