@@ -185,7 +185,9 @@ class Window(object):
             print(os.getcwd())
 
             os.chdir(os.path.dirname(path_to_scenario_dir))
-            p = subprocess.Popen("../grow.exe calibrate " + os.path.basename(path_to_scenario_dir))
+            print("DEBUG!: os getcwd " + os.getcwd())
+            print("DEBUG!: ../grow.exe calibrate " + os.path.basename(path_to_scenario_dir))
+            p = subprocess.Popen("../grow.exe calibrate " + "scenario.gdansk_calib_paper_1")
             p.wait()
             out, err = p.communicate()
 
